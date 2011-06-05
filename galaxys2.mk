@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES := \
 
 # Init files
 PRODUCT_COPY_FILES += \
+	device/samsung/c1-common/init.rc:root/init.rc \
 	device/samsung/c1-common/init.c1.rc:root/init.c1.rc \
 	device/samsung/c1-common/ueventd.c1.rc:root/ueventd.c1.rc
 
