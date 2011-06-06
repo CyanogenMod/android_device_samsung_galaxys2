@@ -131,12 +131,22 @@ PRODUCT_LOCALES := hdpi
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/dhd.ko:system/lib/modules/dhd.ko \
     device/samsung/galaxys2/cifs.ko:system/lib/modules/cifs.ko \
-    device/samsung/galaxys2/bthid.ko:system/lib/modules/bthid.ko \
-    device/samsung/galaxys2/j4fs.ko:system/lib/modules/j4fs.ko \
-    device/samsung/galaxys2/vibrator.ko:system/lib/modules/vibrator.ko \
-    device/samsung/galaxys2/gspca_main.ko:system/lib/modules/gspca_main.ko \
-    device/samsung/galaxys2/Si4709_driver.ko:system/lib/modules/Si4709_driver.ko \
-    device/samsung/galaxys2/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko
+    device/samsung/galaxys2/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    device/samsung/galaxys2/gspca_main.ko:system/lib/modules/gspca_main.ko
+
+# kernel modules for ramdisk
+PRODUCT_COPY_FILES += \
+    device/samsung/galaxys2/bthid.ko:root/lib/modules/bthid.ko \
+    device/samsung/galaxys2/j4fs.ko:root/lib/modules/j4fs.ko \
+    device/samsung/galaxys2/vibrator.ko:root/lib/modules/vibrator.ko \
+    device/samsung/galaxys2/Si4709_driver.ko:root/lib/modules/Si4709_driver.ko
+
+# kernel modules for recovery ramdisk
+PRODUCT_COPY_FILES += \
+    device/samsung/galaxys2/bthid.ko:recovery/root/lib/modules/bthid.ko \
+    device/samsung/galaxys2/j4fs.ko:recovery/root/lib/modules/j4fs.ko \
+    device/samsung/galaxys2/vibrator.ko:recovery/root/lib/modules/vibrator.ko \
+    device/samsung/galaxys2/Si4709_driver.ko:recovery/root/lib/modules/Si4709_driver.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/galaxys2/kernel
