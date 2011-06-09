@@ -71,7 +71,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Connectivity - Wi-Fi
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-BOARD_WLAN_DEVICE := bcm4330
+BOARD_WLAN_DEVICE := bcm4329
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_STA_PATH     := "system/vendor/firmware/bcm4330_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := ""
