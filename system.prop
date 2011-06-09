@@ -1,0 +1,9 @@
+#
+# system.prop for asop5000
+#
+
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/ttyS0
+ro.sf.lcd_density=240
+dalvik.vm.heapsize=64m
+
