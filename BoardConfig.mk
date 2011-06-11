@@ -42,6 +42,10 @@ TARGET_RECOVERY_INITRC := device/samsung/c1-common/recovery.rc
 
 BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 
+# Releasetools
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/c1-common/releasetools/c1_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/c1-common/releasetools/c1_img_from_target_files
+
 # Camera
 USE_CAMERA_STUB := false
 ifeq ($(USE_CAMERA_STUB),false)
@@ -71,9 +75,10 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Connectivity - Wi-Fi
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+# galaxys2 uses bcm4330
 BOARD_WLAN_DEVICE := bcm4329
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_STA_PATH     := "system/vendor/firmware/bcm4330_sta.bin"
+WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
+WIFI_DRIVER_FW_STA_PATH     := "/system/vendor/firmware/bcm4330_sta.bin"
 WIFI_DRIVER_FW_AP_PATH      := ""
 WIFI_DRIVER_MODULE_NAME     :=  "dhd"
 WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/vendor/firmware/bcm4330_sta.bin nvram_path=/system/vendor/firmware/nvram_net.txt"
