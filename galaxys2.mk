@@ -52,8 +52,8 @@ PRODUCT_COPY_FILES := \
 # Init files
 PRODUCT_COPY_FILES += \
 	device/samsung/c1-common/init.rc:root/init.rc \
-	device/samsung/c1-common/init.c1.rc:root/init.c1.rc \
-	device/samsung/c1-common/ueventd.c1.rc:root/ueventd.c1.rc
+	device/samsung/c1-common/init.smdkc210.rc:root/init.smdkc210.rc \
+	device/samsung/c1-common/ueventd.smdkc210.rc:root/ueventd.smdkc210.rc
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
@@ -127,26 +127,23 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # PRODUCT_LOCALES expansion must not be a density.
 PRODUCT_LOCALES := hdpi
 
-# kernel modules
+#kernel modules
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/dhd.ko:system/lib/modules/dhd.ko \
-    device/samsung/galaxys2/cifs.ko:system/lib/modules/cifs.ko \
-    device/samsung/galaxys2/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-    device/samsung/galaxys2/gspca_main.ko:system/lib/modules/gspca_main.ko
+    device/samsung/galaxys2/cifs.ko:system/lib/modules/cifs.ko
 
 # kernel modules for ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/bthid.ko:root/lib/modules/bthid.ko \
+    device/samsung/galaxys2/dhd.ko:root/lib/modules/dhd.ko \
+    device/samsung/galaxys2/gspca_main.ko:root/lib/modules/gspca_main.ko \
     device/samsung/galaxys2/j4fs.ko:root/lib/modules/j4fs.ko \
-    device/samsung/galaxys2/vibrator.ko:root/lib/modules/vibrator.ko \
-    device/samsung/galaxys2/Si4709_driver.ko:root/lib/modules/Si4709_driver.ko
+    device/samsung/galaxys2/scsi_wait_scan.ko:root/lib/modules/scsi_wait_scan.ko \
+    device/samsung/galaxys2/Si4709_driver.ko:root/lib/modules/Si4709_driver.ko \
+    device/samsung/galaxys2/vibrator.ko:root/lib/modules/vibrator.ko
 
 # kernel modules for recovery ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/bthid.ko:recovery/root/lib/modules/bthid.ko \
-    device/samsung/galaxys2/j4fs.ko:recovery/root/lib/modules/j4fs.ko \
-    device/samsung/galaxys2/vibrator.ko:recovery/root/lib/modules/vibrator.ko \
-    device/samsung/galaxys2/Si4709_driver.ko:recovery/root/lib/modules/Si4709_driver.ko
+    device/samsung/galaxys2/j4fs.ko:recovery/root/lib/modules/j4fs.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/galaxys2/kernel
