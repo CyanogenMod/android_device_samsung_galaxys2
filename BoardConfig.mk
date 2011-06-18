@@ -40,8 +40,6 @@ TARGET_BOARD_PLATFORM := smdkc210
 TARGET_BOOTLOADER_BOARD_NAME := GT-I9100
 TARGET_RECOVERY_INITRC := device/samsung/c1-common/recovery.rc
 
-BOARD_VOLD_MAX_PARTITIONS := 12
-
 BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 
 # Releasetools
@@ -86,7 +84,10 @@ WIFI_DRIVER_MODULE_NAME     :=  "dhd"
 WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/vendor/firmware/bcm4330_sta.bin nvram_path=/system/etc/nvram_net.txt"
 
 # Vold
+BOARD_VOLD_MAX_PARTITIONS := 12
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+# use pre-kernel.35 vold usb mounting
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
