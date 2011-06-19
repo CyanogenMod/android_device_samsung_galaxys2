@@ -92,6 +92,7 @@ PRODUCT_PACKAGES := \
     libaudio \
     libaudiopolicy \
     acoustics.default \
+    gps.GT-I9100 \
     alsa.default
 
 # The OpenGL ES API level that is natively supported by this device.
