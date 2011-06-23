@@ -34,39 +34,8 @@
 # and is used by people who have access to binary versions of the drivers
 # but not to the original vendor tree. Be sure to update both.
 
-
-# These is the hardware-specific overlay, which points to the location
-# of hardware-specific resource overrides, typically the frameworks and
-# application settings that are stored in resourced.
-DEVICE_PACKAGE_OVERLAYS := device/samsung/c1-common/overlay
-
-# These are the hardware-specific configuration files
-PRODUCT_COPY_FILES := \
-	device/samsung/c1-common/asound.conf:system/etc/asound.conf \
-	device/samsung/c1-common/gps.conf:system/etc/gps.conf \
-	device/samsung/c1-common/nvram_net.txt:system/etc/nvram_net.txt \
-	device/samsung/c1-common/sirfgps.conf:system/etc/sirfgps.conf \
-	device/samsung/c1-common/vold.fstab:system/etc/vold.fstab \
-	device/samsung/c1-common/egl.cfg:system/lib/egl/egl.cfg
-
-# Init files
-PRODUCT_COPY_FILES += \
-	device/samsung/c1-common/init.rc:root/init.rc \
-	device/samsung/c1-common/init.smdkc210.rc:root/init.smdkc210.rc \
-	device/samsung/c1-common/ueventd.smdkc210.rc:root/ueventd.smdkc210.rc
-
-# Prebuilt kl keymaps
-PRODUCT_COPY_FILES += \
-	device/samsung/c1-common/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-	device/samsung/c1-common/keylayout/Broadcom_Bluetooth_HID.kl:system/usr/keylayout/Broadcom_Bluetooth_HID.kl \
-	device/samsung/c1-common/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-	device/samsung/c1-common/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-	device/samsung/c1-common/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
-	device/samsung/c1-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
-
-# configuration files
-PRODUCT_COPY_FILES += \
-	device/samsung/c1-common/media_profiles.xml:system/etc/media_profiles.xml
+# include common makefile for c1 platform
+$(call inherit-product-if-exists, device/samsung/c1-common/common.mk)
 
 # apns config file
 PRODUCT_COPY_FILES += \
@@ -89,12 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # Libs
 PRODUCT_PACKAGES := \
-    libaudio \
-    libaudiopolicy \
-    acoustics.default \
     gps.GT-I9100 \
-    lights.GT-I9100 \
-    alsa.default
+    lights.GT-I9100
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
