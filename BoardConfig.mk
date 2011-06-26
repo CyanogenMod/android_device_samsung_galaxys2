@@ -92,8 +92,6 @@ WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/vendor/firmware/bcm4330_s
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 12
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-# use pre-kernel.35 vold usb mounting
-BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
