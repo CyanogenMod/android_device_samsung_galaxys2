@@ -104,7 +104,7 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/c1-common/shbootimg.mk
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := galaxys2,GT-I9100
+TARGET_OTA_ASSERT_DEVICE := galaxys2,GT-I9100,GT-I9100T
 
 # Include aries specific stuff
 -include device/samsung/c1-common/Android.mk
