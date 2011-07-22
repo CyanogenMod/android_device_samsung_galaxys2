@@ -88,7 +88,7 @@ int device_handle_key(int key_code, int visible) {
             case KEY_BACKSPACE:
             case KEY_SEARCH:
             case KEY_BACK:
-                return NO_ACTION;
+                return GO_BACK;
         }
     }
 
