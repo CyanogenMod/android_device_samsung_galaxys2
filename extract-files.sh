@@ -20,95 +20,105 @@ MANUFACTURER=samsung
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/cameradata
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars
+mkdir -p ../../../vendor/$MANUFACTURER/$COMMON/proprietary/wifi
 
 # galaxys2
 
 
 # c1-common
-adb pull /system/lib/libActionShot.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary
-adb pull /system/lib/libakm.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary
-adb pull /system/lib/libarccamera.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libcamera_client.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libcaps.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libEGL.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libexif.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libfimc.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libfimg.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libGLESv1_CM.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libGLESv2.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libMali.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libOpenSLES.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libPanoraMax3.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libs5pjpeg.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libseccameraadaptor.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libseccamera.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsecjpegencoder.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsecril-client.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsec-ril.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutcec.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutddc.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutedid.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/lib_tvoutengine.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutfimc.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutfimg.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvouthdmi.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvout_jni.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvoutservice.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libtvout.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/BCM4330B1_002.001.003.0043.0077.hcd ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/tvoutserver ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/cameradata/datapattern_420sp.yuv ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/cameradata/datapattern_front_420sp.yuv ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/egl/libEGL_mali.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/egl/libGLES_android.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/egl/libGLESv1_CM_mali.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/egl/libGLESv2_mali.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/etc/firmware/qt602240.fw ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/etc/firmware/RS_M5LS_OB.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/etc/firmware/RS_M5LS_OC.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/etc/firmware/RS_M5LS_TB.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/vendor/firmware/mfc_fw.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/hw/copybit.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/copybit.GT-I9100.so
-adb pull /system/lib/hw/vendor-gps.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/gps.GT-I9100.so
-adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/hw/gralloc.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/gralloc.GT-I9100.so
-adb pull /system/usr/keychars/Broadcom_Bluetooth_HID.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/usr/keychars/qwerty2.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/usr/keychars/qwerty.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/usr/keychars/sec_key.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/usr/keychars/sec_touchkey.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/vendor/firmware/bcm4330_mfg.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/vendor/firmware/bcm4330_sta.bin ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/alsa_amixer ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/alsa_aplay ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/alsa_ctl ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/bin/alsa_ucm ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libasound.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libaudioeffect_jni.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libaudiohw_op.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libaudiohw_sf.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libmediayamaha.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libmediayamaha_jni.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libmediayamahaservice.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libmediayamaha_tuning_jni.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsamsungAcousticeq.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/lib_Samsung_Resampler.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsamsungSoundbooster.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/lib_Samsung_Sound_Booster.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsoundalive.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libsoundpool.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libSR_AudioIn.so ../../../vendor/$MANUFACTURER/$COMMON
-adb pull /system/lib/libyamahasrc.so ../../../vendor/$MANUFACTURER/$COMMON
+adb pull /system/lib/libActionShot.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libActionShot.so
+adb pull /system/lib/libakm.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libakm.so
+adb pull /system/lib/libarccamera.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libarccamera.so
+adb pull /system/lib/libcamera_client.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libcamera_client.so
+adb pull /system/lib/libcameraservice.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libcameraservice.so
+adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libcamera.so
+adb pull /system/lib/libcaps.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libcaps.so
+adb pull /system/lib/libEGL.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libEGL.so
+adb pull /system/lib/libexif.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libexif.so
+adb pull /system/lib/libfimc.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libfimc.so
+adb pull /system/lib/libfimg.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libfimg.so
+adb pull /system/lib/libGLESv1_CM.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libGLESv1_CM.so
+adb pull /system/lib/libGLESv2.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libGLESv2.so
+adb pull /system/lib/libMali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libMali.so
+adb pull /system/lib/libOpenSLES.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libOpenSLES.so
+adb pull /system/lib/libPanoraMax3.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libPanoraMax3.so
+adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libril.so
+adb pull /system/lib/libs5pjpeg.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libs5pjpeg.so
+adb pull /system/lib/libseccameraadaptor.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libseccameraadaptor.so
+adb pull /system/lib/libseccamera.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libseccamera.so
+adb pull /system/lib/libsecjpegarcsoft.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecjpegarcsoft.so
+adb pull /system/lib/libsecjpegboard.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecjpegboard.so
+adb pull /system/lib/libsecjpeginterface.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecjpeginterface.so
+adb pull /system/lib/libsecril-client.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecril-client.so
+adb pull /system/lib/libsec-ril.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsec-ril.so
+adb pull /system/lib/libtvoutcec.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutcec.so
+adb pull /system/lib/libtvoutddc.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutddc.so
+adb pull /system/lib/libtvoutedid.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutedid.so
+adb pull /system/lib/lib_tvoutengine.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/lib_tvoutengine.so
+adb pull /system/lib/libtvoutfimc.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutfimc.so
+adb pull /system/lib/libtvoutfimg.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutfimg.so
+adb pull /system/lib/libtvouthdmi.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvouthdmi.so
+adb pull /system/lib/libtvout_jni.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvout_jni.so
+adb pull /system/lib/libtvoutservice.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutservice.so
+adb pull /system/lib/libtvout.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvout.so
+adb pull /system/bin/BCM4330B1_002.001.003.0128.0162.hcd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/BCM4330B1_002.001.003.0128.0162.hcd
+adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$COMMON/proprietary/rild
+adb pull /system/bin/tvoutserver ../../../vendor/$MANUFACTURER/$COMMON/proprietary/tvoutserver
+adb pull /system/cameradata/datapattern_420sp.yuv ../../../vendor/$MANUFACTURER/$COMMON/proprietary/cameradata/datapattern_420sp.yuv
+adb pull /system/cameradata/datapattern_front_420sp.yuv ../../../vendor/$MANUFACTURER/$COMMON/proprietary/cameradata/datapattern_front_420sp.yuv
+adb pull /system/lib/egl/libEGL_mali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libEGL_mali.so
+adb pull /system/lib/egl/libGLES_android.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLES_android.so
+adb pull /system/lib/egl/libGLESv1_CM_mali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLESv1_CM_mali.so
+adb pull /system/lib/egl/libGLESv2_mali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLESv2_mali.so
+adb pull /system/etc/firmware/qt602240.fw ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware/qt602240.fw
+adb pull /system/etc/firmware/RS_M5LS_OB.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware/RS_M5LS_OB.bin
+adb pull /system/etc/firmware/RS_M5LS_OC.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware/RS_M5LS_OC.bin
+adb pull /system/etc/firmware/RS_M5LS_TB.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware/RS_M5LS_TB.bin
+adb pull /system/vendor/firmware/mfc_fw.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/firmware/mfc_fw.bin
+adb pull /system/lib/hw/acoustics.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/acoustics.default.so
+adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/alsa.default.so
+adb pull /system/lib/hw/copybit.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/copybit.GT-I9100.so
+adb pull /system/lib/hw/vendor-gps.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gps.GT-I9100.so
+adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.default.so
+adb pull /system/lib/hw/gralloc.smdkv310.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.GT-I9100.so
+adb pull /system/usr/keychars/Broadcom_Bluetooth_HID.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/Broadcom_Bluetooth_HID.kcm.bin
+adb pull /system/usr/keychars/qwerty2.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/qwerty2.kcm.bin
+adb pull /system/usr/keychars/qwerty.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/qwerty.kcm.bin
+adb pull /system/usr/keychars/sec_key.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/sec_key.kcm.bin
+adb pull /system/usr/keychars/sec_touchkey.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/sec_touchkey.kcm.bin
+adb pull /system/vendor/firmware/bcm4330_aps.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/wifi/bcm4330_aps.bin
+adb pull /system/vendor/firmware/bcm4330_mfg.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/wifi/bcm4330_mfg.bin
+adb pull /system/vendor/firmware/bcm4330_sta.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/wifi/bcm4330_sta.bin
+adb pull /system/bin/alsa_amixer ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/alsa_amixer
+adb pull /system/bin/alsa_aplay ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/alsa_aplay
+adb pull /system/bin/alsa_ctl ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/alsa_ctl
+adb pull /system/bin/alsa_ucm ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/alsa_ucm
+adb pull /system/lib/libasound.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libasound.so
+adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libaudio.so
+adb pull /system/lib/libaudioeffect_jni.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libaudioeffect_jni.so
+adb pull /system/lib/libaudiohw_op.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libaudiohw_op.so
+adb pull /system/lib/libaudiohw_sf.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libaudiohw_sf.so
+adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libaudiopolicy.so
+adb pull /system/lib/liblvvefs.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/liblvvefs.so
+adb pull /system/lib/libmediayamaha.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libmediayamaha.so
+adb pull /system/lib/libmediayamaha_jni.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libmediayamaha_jni.so
+adb pull /system/lib/libmediayamahaservice.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libmediayamahaservice.so
+adb pull /system/lib/libmediayamaha_tuning_jni.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libmediayamaha_tuning_jni.so
+adb pull /system/lib/libsamsungAcousticeq.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libsamsungAcousticeq.so
+adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/lib_Samsung_Acoustic_Module_Llite.so
+adb pull /system/lib/lib_Samsung_Resampler.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/lib_Samsung_Resampler.so
+adb pull /system/lib/libsamsungSoundbooster.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libsamsungSoundbooster.so
+adb pull /system/lib/lib_Samsung_Sound_Booster.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/lib_Samsung_Sound_Booster.so
+adb pull /system/lib/libsoundalive.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libsoundalive.so
+adb pull /system/lib/libsoundpool.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libsoundpool.so
+adb pull /system/lib/libSR_AudioIn.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libSR_AudioIn.so
+adb pull /system/lib/libyamahasrc.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/audio/libyamahasrc.so
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -180,7 +190,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libs5pjpeg.so:system/lib/libs5pjpeg.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libseccamera.so:system/lib/libseccamera.so \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/libsecjpegencoder.so:system/lib/libsecjpegencoder.so \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libsecjpegarcsoft.so:system/lib/libsecjpegarcsoft.so \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libsecjpegboard.so:system/lib/libsecjpegboard.so \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libsecjpeginterface.so:system/lib/libsecjpeginterface.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libsecril-client.so:system/lib/libsecril-client.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libsec-ril.so:system/lib/libsec-ril.so \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libtvoutcec.so:system/lib/libtvoutcec.so \\
@@ -195,7 +207,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libtvout.so:system/lib/libtvout.so
 
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/BCM4330B1_002.001.003.0043.0077.hcd:system/bin/BCM4330B1_002.001.003.0043.0077.hcd \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/BCM4330B1_002.001.003.0128.0162.hcd:system/bin/BCM4330B1_002.001.003.0128.0162.hcd \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/rild:system/bin/rild \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/tvoutserver:system/bin/tvoutserver
 
@@ -232,6 +244,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/keychars/sec_touchkey.kcm.bin:system/usr/keychars/sec_touchkey.kcm.bin
 
 PRODUCT_COPY_FILES += \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/wifi/bcm4330_aps.bin:system/vendor/firmware/bcm4330_aps.bin \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/wifi/bcm4330_mfg.bin:system/vendor/firmware/bcm4330_mfg.bin \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/wifi/bcm4330_sta.bin:system/vendor/firmware/bcm4330_sta.bin
 
