@@ -99,19 +99,17 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # PRODUCT_LOCALES expansion must not be a density.
 PRODUCT_LOCALES := hdpi
 
-#kernel modules
-PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/cifs.ko:system/lib/modules/cifs.ko
-
 # kernel modules for ramdisk
-PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/bthid.ko:root/lib/modules/bthid.ko \
-    device/samsung/galaxys2/dhd.ko:root/lib/modules/dhd.ko \
-    device/samsung/galaxys2/gspca_main.ko:root/lib/modules/gspca_main.ko \
-    device/samsung/galaxys2/j4fs.ko:root/lib/modules/j4fs.ko \
-    device/samsung/galaxys2/scsi_wait_scan.ko:root/lib/modules/scsi_wait_scan.ko \
-    device/samsung/galaxys2/Si4709_driver.ko:root/lib/modules/Si4709_driver.ko \
-    device/samsung/galaxys2/vibrator.ko:root/lib/modules/vibrator.ko
+RAMDISK_MODULES = $(addprefix device/samsung/galaxys2/,bthid.ko dhd.ko gspca_main.ko j4fs.ko \
+	scsi_wait_scan.ko Si4709_driver.ko vibrator.ko)
+PRODUCT_COPY_FILES += $(foreach module,\
+	$(RAMDISK_MODULES),\
+	$(module):root/lib/modules/$(notdir $(module)))
+
+# other kernel modules not in ramdisk
+PRODUCT_COPY_FILES += $(foreach module,\
+	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/*.ko)),\
+	$(module):system/lib/modules/$(notdir $(module)))
 
 # kernel modules for recovery ramdisk
 PRODUCT_COPY_FILES += \
