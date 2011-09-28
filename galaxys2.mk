@@ -37,6 +37,9 @@
 # include common makefile for c1 platform
 $(call inherit-product-if-exists, device/samsung/c1-common/common.mk)
 
+# include overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/galaxys2/overlay
+
 # apns config file
 PRODUCT_COPY_FILES += \
         vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml

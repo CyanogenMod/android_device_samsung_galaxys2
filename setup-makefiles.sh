@@ -49,6 +49,7 @@ PRODUCT_COPY_FILES := \\
 
 # Pick up overlay for features that depend on non-open-source files
 DEVICE_PACKAGE_OVERLAYS := vendor/__MANUFACTURER__/c1-common/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/__MANUFACTURER__/__DEVICE__/overlay
 
 \$(call inherit-product, vendor/__MANUFACTURER__/__DEVICE__/__DEVICE__-vendor-blobs.mk)
 \$(call inherit-product, vendor/__MANUFACTURER__/__COMMON__/c1-vendor-blobs.mk)
