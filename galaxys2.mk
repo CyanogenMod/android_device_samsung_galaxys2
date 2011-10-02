@@ -58,6 +58,15 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# Prebuilt kl keymaps
+PRODUCT_COPY_FILES += \
+	device/samsung/galaxys2/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+	device/samsung/galaxys2/keylayout/Broadcom_Bluetooth_HID.kl:system/usr/keylayout/Broadcom_Bluetooth_HID.kl \
+	device/samsung/galaxys2/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+	device/samsung/galaxys2/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+	device/samsung/galaxys2/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
+	device/samsung/galaxys2/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
+
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES := \
