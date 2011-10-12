@@ -97,7 +97,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Default=true for development builds, set by android buildsystem.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
-    dalvik.vm.checkjni=false
+    dalvik.vm.checkjni=false \
+    persist.sys.vold.switchexternal=1
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
