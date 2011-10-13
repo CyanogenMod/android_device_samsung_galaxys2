@@ -61,6 +61,7 @@ endif
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_FORCE_STATIC_A2DP := true
+BOARD_CUSTOM_BLUEDROID := ../../../device/samsung/c1-common/bluedroid/bluetooth.c
 
 # gps
 BOARD_USES_GPSWRAPPER := true
