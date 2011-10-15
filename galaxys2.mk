@@ -83,7 +83,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
        dalvik.vm.heapsize=64m \
        persist.service.usb.setting=0 \
-       dev.sfbootcomplete=0
+       dev.sfbootcomplete=0 \
+       persist.sys.vold.switchexternal=1
 
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
