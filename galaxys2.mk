@@ -107,11 +107,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# Set en_us as default locale
+PRODUCT_LOCALES := en_US
+
 # Screen density is actually considered a locale (since it is taken into account
 # the the build-time selection of resources). The product definitions including
 # this file must pay attention to the fact that the first entry in the final
 # PRODUCT_LOCALES expansion must not be a density.
-PRODUCT_LOCALES := hdpi
+PRODUCT_LOCALES += hdpi
 
 # kernel modules for ramdisk
 RAMDISK_MODULES = $(addprefix device/samsung/galaxys2/,bthid.ko dhd.ko gspca_main.ko j4fs.ko \

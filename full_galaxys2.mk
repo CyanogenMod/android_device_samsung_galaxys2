@@ -26,9 +26,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/samsung/galaxys2/galaxys2.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
-# Galaxy S uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
-
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_galaxys2
 PRODUCT_DEVICE := galaxys2
