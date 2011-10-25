@@ -58,6 +58,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# Service Mode Secret Code
+PRODUCT_PACKAGES += \
+    SamsungServiceMode
+
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
 	device/samsung/galaxys2/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
