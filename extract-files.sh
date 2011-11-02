@@ -68,7 +68,7 @@ adb pull /system/lib/libtvouthdmi.so ../../../vendor/$MANUFACTURER/$COMMON/propr
 adb pull /system/lib/libtvout_jni.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvout_jni.so
 adb pull /system/lib/libtvoutservice.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvoutservice.so
 adb pull /system/lib/libtvout.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libtvout.so
-adb pull /system/bin/BCM4330B1_002.001.003.0128.0162.hcd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/BCM4330B1_002.001.003.0128.0162.hcd
+adb pull /system/bin/BCM4330B1_002.001.003.0221.0265.hcd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/BCM4330B1_002.001.003.0221.0265.hcd
 adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$COMMON/proprietary/rild
 adb pull /system/bin/tvoutserver ../../../vendor/$MANUFACTURER/$COMMON/proprietary/tvoutserver
 adb pull /system/cameradata/datapattern_420sp.yuv ../../../vendor/$MANUFACTURER/$COMMON/proprietary/cameradata/datapattern_420sp.yuv
@@ -237,7 +237,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libtvout.so:system/lib/libtvout.so
 
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/BCM4330B1_002.001.003.0128.0162.hcd:system/bin/BCM4330B1_002.001.003.0128.0162.hcd \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/BCM4330B1_002.001.003.0221.0265.hcd:system/bin/BCM4330B1_002.001.003.0221.0265.hcd \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/rild:system/bin/rild \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/tvoutserver:system/bin/tvoutserver
 
