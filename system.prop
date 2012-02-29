@@ -1,0 +1,7 @@
+#
+# system.prop for galaxys2
+#
+
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/ttyS0
+persist.sys.strictmode.visual=0

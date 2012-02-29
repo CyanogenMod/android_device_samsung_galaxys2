@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hspa modes -->
+    <com.cyanogenmod.settings.device.Hspa
+                android:key="hspa"
+                android:title="@string/hspa_title_head"
+                android:summary="@string/hspa_summary_head"
+                android:entries="@array/hspa_entries"
+                        android:entryValues="@array/hspa_entries_values"
+                        android:defaultValue="0" />
+
+</PreferenceScreen>

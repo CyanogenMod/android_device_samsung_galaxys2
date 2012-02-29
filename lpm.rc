@@ -1,0 +1,84 @@
+on early-init
+    start ueventd
+
+on init
+    export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
+    export LD_LIBRARY_PATH /vendor/lib:/system/lib
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /mnt/sdcard
+    export PHONE_STORAGE /mnt/emmc
+
+    symlink /system/etc /etc
+    mkdir /mnt 0775 root system
+    mkdir /mnt/sdcard 0000 system system
+    mkdir /mnt/emmc 0000 system system
+    symlink /mnt/sdcard /sdcard
+    symlink /mnt/emmc /emmc
+
+    mkdir /preload
+    mkdir /system
+    mkdir /data
+    mkdir /cache
+    mkdir /efs
+    mkdir /tmp
+    mkdir /dbdata
+    mkdir /mnt 0775 root root
+    mkdir /mnt/.lfs 0775 root root
+    #mount /tmp /tmp tmpfs   
+
+on fs
+	mount ext4 /dev/block/mmcblk0p9 /system wait ro
+	mount ext4 /dev/block/mmcblk0p10 /data nosuid nodev noatime wait
+
+	mkdir /data/log 0777
+	mkdir /data/anr 0777
+	mount ext4 /dev/block/mmcblk0p10 /data remount ro
+
+	chmod 0666 /dev/log/radio
+	chmod 0666 /dev/log/main
+	chmod 0666 /dev/log/event    
+
+on post-fs-data
+# insmod kernel modules
+	insmod /lib/modules/j4fs.ko
+	mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
+
+on boot
+# CPU Frequency Governor
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+
+	ifup lo
+	hostname localhost
+	domainname localdomain
+
+	class_start default
+
+service debuggerd /system/bin/debuggerd
+
+	service ueventd /sbin/ueventd
+    	critical
+
+service console /system/bin/sh
+	console
+
+service playlpm /system/bin/playlpm
+    	user root
+
+service lpmkey /system/bin/charging_mode
+    	user root
+
+# adbd is controlled by the persist.service.adb.enable system property
+service adbd /sbin/adbd
+#    disabled
+
+# adbd on at boot in emulator
+on property:ro.kernel.qemu=1
+    start adbd
+
+on property:persist.service.adb.enable=1
+    start adbd
+
+on property:persist.service.adb.enable=0
+#    stop adbd
+

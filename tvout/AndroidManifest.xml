@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.teamhacksung.tvout" android:versionCode="1"
+	android:versionName="1.0">
+
+	<application android:label="TvOut">
+
+		<service android:exported="false" android:enabled="true"
+			android:name=".TvOutService">
+		</service>
+
+		<receiver android:name=".BootCompletedReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+		
+	</application>
+
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="android.permission.BROADCAST_STICKY"></uses-permission>
+	<uses-permission android:name="android.permission.FACTORY_TEST"></uses-permission>
+</manifest> 

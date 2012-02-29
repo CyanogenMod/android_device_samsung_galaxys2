@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S II Einstellungen</string>
+
+    <string name="screen_colors_title">Farben</string>
+    <string name="category_mdnie_title">Bildschirm</string>
+    <string name="mdnie_scenario_title_head">Szenario</string>
+    <string name="mdnie_scenario_summary_head">Wähle das mDNIe Szenario</string>
+    <string name="mdnie_mode_title_head">Modus</string>
+    <string name="mdnie_mode_summary_head">Wähle den mDNIe Modus</string>
+    <string name="mdnie_negative_title_head">Negativ Modus</string>
+    <string name="mdnie_negative_summary_head">Aktiviert/Deaktiviert negierte Farben</string>
+    <string name="mdnie_outdoor_title_head">Outdoor Modus</string>
+    <string name="mdnie_outdoor_summary_head">Aktiviert/Deaktiviert den Outdoor Modus</string>
+    <string name="panel_gamma_title_head">Gamma Einstellung</string>
+    <string name="panel_gamma_summary_head">Setzt den Gamma Wert</string>
+
+    <string name="touchscreen_subcat_title">Touchscreen</string>
+    <string name="touchscreen_sensitivity_title_head">Sensitivität</string>
+    <string name="touchscreen_sensitivity_summary_head">Setzt die Touchpanel Sensitivität</string>
+
+    <string name="category_sensors_title">Sensoren</string>
+    <string name="gyro_subcat_title">Gyroskop</string>
+    <string name="use_gyro_calibration_title_head">Kalibierungsdaten</string>
+    <string name="use_gyro_calibration_summary_head">Benutze Kalibrierungswerte. Bitte nach Aktivierung eine Kalibrierung durchführen!</string>
+    <string name="calibrate_gyro_title_head">Kalibrieren</string>
+    <string name="calibrate_gyro_summary_head">Lege dein Telefon auf einen geraden Untergrund und starte die Kalibrierung.</string>
+
+    <string name="category_radio_title">Mobilfunk</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Aktiviert HSDPA/HSUPA</string>
+</resources>

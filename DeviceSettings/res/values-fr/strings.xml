@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paramètres Galaxy S II</string>
+
+    <string name="category_mdnie_title">Ecran</string>
+    <string name="screen_colors_title">Couleurs</string>
+    <string name="mdnie_scenario_title_head">Scénario</string>
+    <string name="mdnie_scenario_summary_head">Définit le scénario mDNIe</string>
+    <string name="mdnie_mode_title_head">Mode</string>
+    <string name="mdnie_mode_summary_head">Définit le mode mDNIe</string>
+    <string name="mdnie_negative_title_head">Mode négatif</string>
+    <string name="mdnie_negative_summary_head">Active/désactive les couleurs inversées</string>
+    <string name="mdnie_outdoor_title_head">Mode extérieur</string>
+    <string name="mdnie_outdoor_summary_head">Active/désactive le mode extérieur</string>
+    <string name="panel_gamma_title_head">Gamma écran</string>
+    <string name="panel_gamma_summary_head">Définit la valeur de gamma de l\'écran</string>
+    <string name="touchscreen_subcat_title">Tactile</string>
+    <string name="touchscreen_sensitivity_title_head">Sensibilité</string>
+    <string name="touchscreen_sensitivity_summary_head">Définit la sensibilité du toucher</string>
+
+    <string name="category_sensors_title">Capteurs</string>
+    <string name="gyro_subcat_title">Gyroscope</string>
+    <string name="use_gyro_calibration_title_head">Utiliser données de calibration</string>
+    <string name="use_gyro_calibration_summary_head">Utiliser les données de calibration du gyroscope. Faites une calibration après avoir coché !</string>
+    <string name="calibrate_gyro_title_head">Calibrer</string>
+    <string name="calibrate_gyro_summary_head">Posez le téléphone à plat, puis appuyez sur ce bouton pour effecter la calibration.</string>
+    <string name="touchkey_subcat_title">Touches tactiles</string>
+    <string name="touchkey_light_title_head">Activer l\'éclairage</string>
+    <string name="touchkey_light_summary_head">Illumine les touches tactiles quand l\'écran est activé.</string>
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Activer HSDPA/HSUPA</string>
+</resources>

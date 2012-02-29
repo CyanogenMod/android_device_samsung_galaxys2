@@ -1,0 +1,99 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="mdnie_scenario_entries">
+        <item>UI (Standard)</item>
+	    <item>Video</item>
+	    <item>Video warm</item>
+	    <item>Video kalt</item>
+	    <item>Kamera</item>
+	    <item>Navigation</item>
+	    <item>Gallerie</item>
+        <item>VT</item>
+    </string-array>
+
+    <string-array name="mdnie_scenario_entries_values" translatable="false">
+	    <item>0</item>
+        <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	    <item>4</item>
+	    <item>5</item>
+	    <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries">
+	    <item>Standard</item>
+	    <item>Dynamisch</item>
+        <item>Natürlich</item>
+	    <item>Film</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries_values" translatable="false">
+	    <item>1</item>
+	    <item>0</item>
+        <item>2</item>
+	    <item>3</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries">
+	    <item>Normal</item>
+	    <item>Invertiert</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries_values" translatable="false">
+	    <item>0</item>
+	    <item>1</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries">
+	    <item>Deaktiviert</item>
+	    <item>Aktiviert</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries_values" translatable="false">
+	    <item>0</item>
+	    <item>1</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (Standard)</item>
+        <item>1.9</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Standard)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries_values" translatable="false">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="hspa_entries">
+	    <item>Nur UMTS</item>
+	    <item>Nur HSDPA</item>
+	    <item>HSDPA + HSUPA</item>
+    </string-array>
+
+    <string-array name="hspa_entries_values" translatable="false">
+	    <item>21</item>
+	    <item>22</item>
+	    <item>23</item>
+    </string-array>
+
+</resources>

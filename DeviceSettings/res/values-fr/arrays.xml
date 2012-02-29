@@ -1,0 +1,51 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+   <string-array name="mdnie_scenario_entries">
+	<item>UI (Par défaut)</item>
+	<item>Vidéo</item>
+	<item>Vidéo (chaud)</item>
+	<item>Video (froid)</item>
+	<item>Caméra</item>
+	<item>Navigation</item>
+	<item>Gallerie</item>
+    <item>VT</item>
+    </string-array>
+
+   <string-array name="mdnie_mode_entries">
+	<item>Standard (Par défaut)</item>
+	<item>Dynamique</item>
+    <item>Naturel</item>
+	<item>Vidéo</item>
+    </string-array>
+
+   <string-array name="mdnie_negative_entries">
+	<item>Normal</item>
+	<item>Inversé</item>
+    </string-array>
+
+   <string-array name="mdnie_outdoor_entries">
+	<item>Inactif (Par défaut)</item>
+	<item>Actif</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries">
+    <item>2.2 (Par défaut)</item>
+    <item>1.9</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Par défaut)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+        
+    <string-array name="hspa_entries">
+	<item>UMTS seulement</item>
+	<item>HSDPA seulement</item>
+	<item>HSDPA + HSUPA</item>
+    </string-array>
+
+</resources>

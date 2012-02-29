@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory 
+                android:title="@string/gyro_subcat_title">
+    <!-- Use sensor calibration -->
+    <CheckBoxPreference
+                android:key="use_gyro_calibration"
+                android:title="@string/use_gyro_calibration_title_head"
+                android:summary="@string/use_gyro_calibration_summary_head"
+                />
+
+    <!-- Do gyro calibration -->
+    <Preference
+                android:key="calibrate_gyro"
+                android:title="@string/calibrate_gyro_title_head"
+                android:summary="@string/calibrate_gyro_summary_head"
+                />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+                android:title="@string/touchkey_subcat_title">
+    <!-- Touchkey backlight -->
+    <CheckBoxPreference
+                android:key="touchkey_light"
+                android:title="@string/touchkey_light_title_head"
+                android:summary="@string/touchkey_light_summary_head"
+                />
+    </PreferenceCategory>
+</PreferenceScreen>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- All values are in mAh except as noted -->
+  <item name="none">0</item>
+  <item name="screen.on">49</item>
+  <item name="bluetooth.active">142</item>
+  <item name="bluetooth.on">0.3</item>
+  <item name="bluetooth.at">35690</item>
+  <item name="screen.full">260</item>
+  <item name="wifi.on">4</item>
+  <item name="wifi.active">120</item>
+  <item name="wifi.scan">220</item>
+  <item name="dsp.audio">88</item>
+  <item name="dsp.video">88</item>
+  <item name="radio.active">185</item>
+  <!-- The current consumed by the radio when it is scanning for a signal -->
+  <item name="radio.scanning">88</item>
+  <item name="gps.on">50</item>
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>3.4</value>
+      <value>3.4</value>
+  </array>
+  <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>200000</value>
+      <value>500000</value>
+      <value>800000</value>
+      <value>1000000</value>
+      <value>1200000</value>
+      <value>1400000</value>
+      <value>1600000</value>
+  </array>
+  <!-- Power consumption when CPU is idle -->
+  <item name="cpu.idle">1.4</item>
+  <!-- Power consumption due to wake lock held -->
+  <item name="cpu.awake">44</item>
+  <!-- Power consumption at different speeds -->
+  <array name="cpu.active">
+      <value>55.4</value>
+      <value>82.1</value>
+      <value>113.7</value>
+      <value>140.0</value>
+      <value>170.0</value>
+      <value>200.0</value>
+      <value>230.0</value>
+  </array>
+  <!-- This is the battery capacity in mAh -->
+  <item name="battery.capacity">1650</item>
+</device>
