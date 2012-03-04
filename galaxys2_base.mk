@@ -35,10 +35,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab \
 
-# Media
-PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/media_profiles.xml:system/etc/media_profiles.xml
-
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
 	system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
@@ -73,11 +69,14 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
 	Camera
 
+PRODUCT_COPY_FILES += \
+	device/samsung/galaxys2/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Sensors
 PRODUCT_PACKAGES += \
 	lights.exynos4
 
-# Ril
+# RIL
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.ril_class=Smdk4210RIL \
 	mobiledata.interfaces=pdp0,wlan0,gprs,ppp0
@@ -146,5 +145,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Include exynos4 platform specific parts
-#$(call inherit-product, hardware/sec/exynos4/exynos4.mk)
-#$(call inherit-product, hardware/sec/exynos4/Android.mk)
+#$(call inherit-product, hardware/samsung/exynos4/exynos4.mk)
+#$(call inherit-product, hardware/samsung/exynos4/Android.mk)

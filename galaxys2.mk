@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/usr/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
     device/samsung/galaxys2/usr/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm
 
-#idc
+# Idc
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/usr/idc/melfas_ts.idc:system/usr/idc/melfas_ts.idc \
     device/samsung/galaxys2/usr/idc/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc \
@@ -51,23 +51,23 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
     device/samsung/galaxys2/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
 
-# kernel modules for ramdisk
+# Kernel modules for ramdisk
 RAMDISK_MODULES := $(addprefix device/samsung/galaxys2/modules/,dhd.ko j4fs.ko \
 	scsi_wait_scan.ko Si4709_driver.ko)
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(RAMDISK_MODULES),\
 	$(module):root/lib/modules/$(notdir $(module)))
 
-# other kernel modules not in ramdisk
+# Other kernel modules not in ramdisk
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/modules/*.ko)),\
 	$(module):system/lib/modules/$(notdir $(module)))
 
-# kernel modules for recovery ramdisk
+# Kernel modules for recovery ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/modules/j4fs.ko:recovery/root/lib/modules/j4fs.ko
 
-# the kernel itself
+# The kernel itself
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/zImage:kernel
 
