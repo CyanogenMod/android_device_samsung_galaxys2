@@ -197,7 +197,7 @@ adb pull /system/media/battery_error.qmg ../../../vendor/$MANUFACTURER/$COMMON/p
 adb pull /system/media/chargingwarning.qmg ../../../vendor/$MANUFACTURER/$COMMON/proprietary/chargingwarning.qmg
 adb pull /system/media/Disconnected.qmg ../../../vendor/$MANUFACTURER/$COMMON/proprietary/Disconnected.qmg
 adb pull /system/media/LMprec_508.emd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/LMprec_508.emd
-adb pull /system/media/PFFprec_600.emd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/PFFprec_600.em
+adb pull /system/media/PFFprec_600.emd ../../../vendor/$MANUFACTURER/$COMMON/proprietary/PFFprec_600.emd
 
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__COMMON__/$COMMON/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
