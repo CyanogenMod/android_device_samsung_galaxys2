@@ -21,7 +21,7 @@
     <string name="category_sensors_title">Capteurs</string>
     <string name="gyro_subcat_title">Gyroscope</string>
     <string name="use_gyro_calibration_title_head">Utiliser données de calibration</string>
-    <string name="use_gyro_calibration_summary_head">Utiliser les données de calibration du gyroscope. Faites une calibration après avoir coché !</string>
+    <string name="use_gyro_calibration_summary_head">Utiliser les données de calibration du gyroscope. Faites une calibration après avoir coché!</string>
     <string name="calibrate_gyro_title_head">Calibrer</string>
     <string name="calibrate_gyro_summary_head">Posez le téléphone à plat, puis appuyez sur ce bouton pour effecter la calibration.</string>
     <string name="touchkey_subcat_title">Touches tactiles</string>
