@@ -235,6 +235,7 @@ on post-fs-data
     chown system radio /sys/class/lcd/panel/lcd_type
     chown system media_rw /sys/class/lcd/panel/gamma_mode
     chown system media_rw /sys/class/lcd/panel/power_reduce
+    chown system system /sys/class/backlight/panel/auto_brightness
 
 # Permissions for mDNIe
     chown system media_rw /sys/class/mdnie/mdnie/mode
@@ -289,6 +290,9 @@ on boot
     chown system system /sys/power/cpufreq_min_limit
     chmod 0660 /sys/power/cpufreq_max_limit
     chmod 0660 /sys/power/cpufreq_min_limit
+
+    chown system system /sys/power/gpu_lock
+    chmod 0660 /sys/power/gpu_lock
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
