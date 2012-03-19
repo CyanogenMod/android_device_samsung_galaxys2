@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
 
 # Kernel modules for ramdisk
-RAMDISK_MODULES := $(addprefix device/samsung/galaxys2/modules/,dhd.ko j4fs.ko \
+RAMDISK_MODULES := $(addprefix device/samsung/galaxys2/modules/,dhd.ko \
 	scsi_wait_scan.ko Si4709_driver.ko)
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(RAMDISK_MODULES),\
@@ -62,10 +62,6 @@ PRODUCT_COPY_FILES += $(foreach module,\
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/modules/*.ko)),\
 	$(module):system/lib/modules/$(notdir $(module)))
-
-# Kernel modules for recovery ramdisk
-PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/modules/j4fs.ko:recovery/root/lib/modules/j4fs.ko
 
 # The kernel itself
 PRODUCT_COPY_FILES += \
