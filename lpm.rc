@@ -40,8 +40,7 @@ on fs
 	chmod 0666 /dev/log/event    
 
 on post-fs-data
-# insmod kernel modules
-	insmod /lib/modules/j4fs.ko
+# param.lfs
 	mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
 
 on boot
