@@ -62,6 +62,7 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
+    Torch \
     TvOut \
     TvOutHack \
     camera.exynos4 \
