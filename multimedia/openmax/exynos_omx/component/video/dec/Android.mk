@@ -1,0 +1,24 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	Exynos_OMX_Vdec.c
+
+LOCAL_MODULE := libExynosOMX_Vdec
+LOCAL_ARM_MODE := arm
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_C_INCLUDES := $(EXYNOS_OMX_INC)/khronos \
+	$(EXYNOS_OMX_INC)/exynos \
+	$(EXYNOS_OMX_TOP)/osal \
+	$(EXYNOS_OMX_TOP)/core \
+	$(EXYNOS_OMX_COMPONENT)/common \
+	$(EXYNOS_OMX_COMPONENT)/video/dec \
+	$(TARGET_OUT_HEADERS)/$(EXYNOS_OMX_COPY_HEADERS_TO)
+
+ifeq ($(BOARD_USE_ANB), true)
+LOCAL_STATIC_LIBRARIES := libExynosOMX_OSAL
+LOCAL_CFLAGS += -DUSE_ANB
+endif
+
+include $(BUILD_STATIC_LIBRARY)
