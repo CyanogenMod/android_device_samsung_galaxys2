@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ajustes de Galaxy S II</string>
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Activar HSDPA/HSUPA</string>
+
+    <string name="category_mdnie_title">Pantalla</string>
+    <string name="screen_colors_title">Colores</string>
+    <string name="mdnie_scenario_title_head">Escenario</string>
+    <string name="mdnie_scenario_summary_head">Establecer el escenario mDNIe</string>
+    <string name="mdnie_mode_title_head">Modo</string>
+    <string name="mdnie_mode_summary_head">Establecer el modo mDNIe</string>
+    <string name="mdnie_negative_title_head">Modo Negativo</string>
+    <string name="mdnie_negative_summary_head">Activar/Desactivar los colores invertidos</string>
+    <string name="mdnie_outdoor_title_head">Modo Exterior</string>
+    <string name="mdnie_outdoor_summary_head">Activar/Desactivar el modo exterior</string>
+    <string name="panel_gamma_title_head">Gamma</string>
+    <string name="panel_gamma_summary_head">Establecer el valor gamma de la pantalla</string>
+    <string name="touchscreen_subcat_title">Pantalla Táctil</string>
+    <string name="touchscreen_sensitivity_title_head">Sensibilidad táctil</string>
+    <string name="touchscreen_sensitivity_summary_head">Establecer la sensibilidad táctil de la pantalla</string>
+    
+    <string name="category_sensors_title">Sensores</string>
+    <string name="gyro_subcat_title">Giroscopio</string>
+    <string name="use_gyro_calibration_title_head">Usar datos de calibración</string>
+    <string name="use_gyro_calibration_summary_head">Usar los datos de calibración del giroscopio. ¡Calibrar despues de activar!</string>
+    <string name="calibrate_gyro_title_head">Calibrar</string>
+    <string name="calibrate_gyro_summary_head">Poner el dispositivo de una superficie plana y pulsar para calibrar</string>
+    <string name="touchkey_subcat_title">Botones Táctiles</string>
+    <string name="touchkey_light_title_head">Activar iluminación</string>
+    <string name="touchkey_light_summary_head">Iluminar los botones táctiles al encender la pantalla</string> 
+</resources>

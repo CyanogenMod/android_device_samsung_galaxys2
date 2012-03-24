@@ -1,0 +1,51 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="hspa_entries">
+        <item>Solo UMTS</item>
+        <item>solo HSDPA</item>
+        <item>HSDPA + HSUPA</item>
+    </string-array>
+
+    <string-array name="mdnie_scenario_entries">
+        <item>UI (Predeterminado)</item>
+        <item>Video</item>
+        <item>Video Cálido</item>
+        <item>Video Frío</item>
+        <item>Cámara</item>
+        <item>Navegación</item>
+        <item>Galería</item>
+        <item>VT</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries">
+        <item>Estándar (Predeterminado)</item>
+        <item>Dinámico</item>
+        <item>Natural</item>
+        <item>Película</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries">
+        <item>Normal</item>
+        <item>Invertido</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries">
+        <item>Desactivado (Predeterminado)</item>
+        <item>Activado</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (Predeterminado)</item>
+        <item>1.9</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Predeterminado)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+</resources>
