@@ -55,17 +55,20 @@ on boot
 
 service debuggerd /system/bin/debuggerd
 
-	service ueventd /sbin/ueventd
-    	critical
+service ueventd /sbin/ueventd
+    critical
 
 service console /system/bin/sh
-	console
+    console
 
 service playlpm /system/bin/playlpm
-    	user root
+    user root
 
-service lpmkey /system/bin/charging_mode
-    	user root
+service immvibed /system/bin/immvibed
+    oneshot
+
+service lpmkey /system/bin/lpmkey
+    user root
 
 # adbd is controlled by the persist.service.adb.enable system property
 service adbd /sbin/adbd
