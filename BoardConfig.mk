@@ -120,7 +120,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2/overlay/include
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := galaxys2,GT-I9100,GT-I9100M,GT-I9100P,GT-I9100T
