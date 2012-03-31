@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -29,13 +30,16 @@
 
 #include <pixelflinger/pixelflinger.h>
 
-#ifndef BOARD_LDPI_RECOVERY
-	#include "font_10x18.h"
+#ifdef BOARD_USE_CUSTOM_RECOVERY_FONT
+#include BOARD_USE_CUSTOM_RECOVERY_FONT
 #else
-	#include "font_7x16.h"
+#include "font_10x18.h"
 #endif
 
 #include "minui.h"
+
+#define PIXEL_FORMAT GGL_PIXEL_FORMAT_BGRA_8888
+#define PIXEL_SIZE   4
 
 typedef struct {
     GGLSurface texture;
@@ -55,11 +59,11 @@ static int gr_fb_fd = -1;
 static int gr_vt_fd = -1;
 
 static struct fb_var_screeninfo vi;
+static struct fb_fix_screeninfo fi;
 
 static int get_framebuffer(GGLSurface *fb)
 {
     int fd;
-    struct fb_fix_screeninfo fi;
     void *bits;
 
     fd = open("/dev/graphics/fb0", O_RDWR);
@@ -68,13 +72,48 @@ static int get_framebuffer(GGLSurface *fb)
         return -1;
     }
 
-    if (ioctl(fd, FBIOGET_FSCREENINFO, &fi) < 0) {
+    if (ioctl(fd, FBIOGET_VSCREENINFO, &vi) < 0) {
         perror("failed to get fb0 info");
         close(fd);
         return -1;
     }
 
-    if (ioctl(fd, FBIOGET_VSCREENINFO, &vi) < 0) {
+    vi.bits_per_pixel = PIXEL_SIZE * 8;
+    if (PIXEL_FORMAT == GGL_PIXEL_FORMAT_BGRA_8888) {
+      vi.red.offset     = 8;
+      vi.red.length     = 8;
+      vi.green.offset   = 16;
+      vi.green.length   = 8;
+      vi.blue.offset    = 24;
+      vi.blue.length    = 8;
+      vi.transp.offset  = 0;
+      vi.transp.length  = 8;
+    } else if (PIXEL_FORMAT == GGL_PIXEL_FORMAT_RGBX_8888) {
+      vi.red.offset     = 24;
+      vi.red.length     = 8;
+      vi.green.offset   = 16;
+      vi.green.length   = 8;
+      vi.blue.offset    = 8;
+      vi.blue.length    = 8;
+      vi.transp.offset  = 0;
+      vi.transp.length  = 8;
+    } else { /* RGB565*/
+      vi.red.offset     = 11;
+      vi.red.length     = 5;
+      vi.green.offset   = 5;
+      vi.green.length   = 6;
+      vi.blue.offset    = 0;
+      vi.blue.length    = 5;
+      vi.transp.offset  = 0;
+      vi.transp.length  = 0;
+    }
+    if (ioctl(fd, FBIOPUT_VSCREENINFO, &vi) < 0) {
+        perror("failed to put fb0 info");
+        close(fd);
+        return -1;
+    }
+
+    if (ioctl(fd, FBIOGET_FSCREENINFO, &fi) < 0) {
         perror("failed to get fb0 info");
         close(fd);
         return -1;
@@ -90,29 +129,20 @@ static int get_framebuffer(GGLSurface *fb)
     fb->version = sizeof(*fb);
     fb->width = vi.xres;
     fb->height = vi.yres;
-#ifdef BOARD_HAS_JANKY_BACKBUFFER
-    fb->stride = fi.line_length/2;
-#else
-    fb->stride = vi.xres;
-#endif
+    fb->stride = fi.line_length/PIXEL_SIZE;
     fb->data = bits;
-    fb->format = GGL_PIXEL_FORMAT_RGB_565;
-    memset(fb->data, 0, vi.yres * vi.xres * 2);
+    fb->format = PIXEL_FORMAT;
+    memset(fb->data, 0, vi.yres * fi.line_length);
 
     fb++;
 
     fb->version = sizeof(*fb);
     fb->width = vi.xres;
     fb->height = vi.yres;
-#ifdef BOARD_HAS_JANKY_BACKBUFFER
-    fb->stride = fi.line_length/2;
+    fb->stride = fi.line_length/PIXEL_SIZE;
     fb->data = (void*) (((unsigned) bits) + vi.yres * fi.line_length);
-#else
-    fb->stride = vi.xres;
-    fb->data = (void*) (((unsigned) bits) + vi.yres * vi.xres * 2);
-#endif
-    fb->format = GGL_PIXEL_FORMAT_RGB_565;
-    memset(fb->data, 0, vi.yres * vi.xres * 2);
+    fb->format = PIXEL_FORMAT;
+    memset(fb->data, 0, vi.yres * fi.line_length);
 
     return fd;
 }
@@ -121,17 +151,17 @@ static void get_memory_surface(GGLSurface* ms) {
   ms->version = sizeof(*ms);
   ms->width = vi.xres;
   ms->height = vi.yres;
-  ms->stride = vi.xres;
-  ms->data = malloc(vi.xres * vi.yres * 2);
-  ms->format = GGL_PIXEL_FORMAT_RGB_565;
+  ms->stride = fi.line_length/PIXEL_SIZE;
+  ms->data = malloc(fi.line_length * vi.yres);
+  ms->format = PIXEL_FORMAT;
 }
 
 static void set_active_framebuffer(unsigned n)
 {
     if (n > 1) return;
-    vi.yres_virtual = vi.yres * 2;
+    vi.yres_virtual = vi.yres * PIXEL_SIZE;
     vi.yoffset = n * vi.yres;
-    vi.bits_per_pixel = 16;
+    vi.bits_per_pixel = PIXEL_SIZE * 8;
     if (ioctl(gr_fb_fd, FBIOPUT_VSCREENINFO, &vi) < 0) {
         perror("active fb swap failed");
     }
@@ -144,20 +174,10 @@ void gr_flip(void)
     /* swap front and back buffers */
     gr_active_fb = (gr_active_fb + 1) & 1;
 
-#ifdef BOARD_HAS_FLIPPED_SCREEN
-    /* flip buffer 180 degrees for devices with physicaly inverted screens */
-    unsigned int i;
-    for (i = 1; i < (vi.xres * vi.yres); i++) {
-        unsigned short tmp = gr_mem_surface.data[i];
-        gr_mem_surface.data[i] = gr_mem_surface.data[(vi.xres * vi.yres * 2) - i];
-        gr_mem_surface.data[(vi.xres * vi.yres * 2) - i] = tmp;
-    }
-#endif
-
     /* copy data from the in-memory surface to the buffer we're about
      * to make active. */
     memcpy(gr_framebuffer[gr_active_fb].data, gr_mem_surface.data,
-           vi.xres * vi.yres * 2);
+           fi.line_length * vi.yres);
 
     /* inform the display driver */
     set_active_framebuffer(gr_active_fb);
@@ -312,6 +332,9 @@ int gr_init(void)
     gl->activeTexture(gl, 0);
     gl->enable(gl, GGL_BLEND);
     gl->blendFunc(gl, GGL_SRC_ALPHA, GGL_ONE_MINUS_SRC_ALPHA);
+
+    gr_fb_blank(true);
+    gr_fb_blank(false);
 
     return 0;
 }
