@@ -7,11 +7,11 @@
     </string-array>
 
     <string-array name="mdnie_scenario_entries">
-        <item>UI (Predeterminado)</item>
+        <item>Cámara (Predeterminado)</item>
         <item>Video</item>
         <item>Video Cálido</item>
         <item>Video Frío</item>
-        <item>Cámara</item>
+        <item>UI</item>
         <item>Navegación</item>
         <item>Galería</item>
         <item>VT</item>

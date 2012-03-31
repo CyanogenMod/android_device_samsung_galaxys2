@@ -1,22 +1,22 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="mdnie_scenario_entries">
-	    <item>UI (Default)</item>
+	    <item>Camera (Default)</item>
 	    <item>Video</item>
 	    <item>Video Warm</item>
 	    <item>Video Cold</item>
-	    <item>Camera</item>
+	    <item>UI</item>
 	    <item>Navigation</item>
 	    <item>Gallery</item>
         <item>VT</item>
     </string-array>
 
     <string-array name="mdnie_scenario_entries_values" translatable="false">
-	    <item>0</item>
+	    <item>4</item>
 	    <item>1</item>
 	    <item>2</item>
 	    <item>3</item>
-	    <item>4</item>
+	    <item>0</item>
 	    <item>5</item>
 	    <item>6</item>
         <item>7</item>
