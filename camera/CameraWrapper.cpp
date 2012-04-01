@@ -316,7 +316,7 @@ char* camera_get_parameters(struct camera_device * device)
     return params;
 }
 
-static void camera_put_parameters(struct camera_device *device, char *parms)
+static void camera_put_parameters(struct camera_device *device, char *params)
 {
     LOGV("%s", __FUNCTION__);
     LOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device, (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
@@ -328,7 +328,7 @@ static void camera_put_parameters(struct camera_device *device, char *parms)
     __android_log_write(4, "put_parameters: %s", params);
 #endif
 
-    VENDOR_CALL(device, put_parameters, parms);
+    VENDOR_CALL(device, put_parameters, params);
 }
 
 int camera_send_command(struct camera_device * device,
