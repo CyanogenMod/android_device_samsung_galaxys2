@@ -13,10 +13,10 @@
 ######################
 
 # internal sdcard
-dev_mount internal /mnt/sdcard 11 /devices/platform/dw_mmc/mmc_host/mmc0/mmc0 encryptable_nonremovable
+dev_mount sdcard /mnt/sdcard 11 /devices/platform/dw_mmc/mmc_host/mmc0/mmc0 encryptable_nonremovable
 
 # external sdcard
-dev_mount sdcard /mnt/emmc auto /devices/platform/s3c-sdhci.2/mmc_host/mmc1
+dev_mount emmc /mnt/emmc auto /devices/platform/s3c-sdhci.2/mmc_host/mmc1
 
 # USB storage device
 dev_mount usbdisk /mnt/usbdisk auto /devices/platform/s3c_otghcd/usb
