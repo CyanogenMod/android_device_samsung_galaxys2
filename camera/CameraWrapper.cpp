@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Hacsksung
+ * Copyright (C) 2012, The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@
 */
 
 #define LOG_NDEBUG 0
+//#define LOG_PARAMETERS
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
 
@@ -49,7 +50,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
          version_minor: 0,
          id: CAMERA_HARDWARE_MODULE_ID,
          name: "Exynos Camera Wrapper",
-         author: "Hacksung",
+         author: "Teamhacksung <info@teamhacksung.org>",
          methods: &camera_module_methods,
          dso: NULL, /* remove compilation warnings */
          reserved: {0}, /* remove compilation warnings */
@@ -290,6 +291,10 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     if(!device)
         return -EINVAL;
 
+#ifdef LOG_PARAMETERS
+    __android_log_write(4, "CODEWORKX set_parameters: %s", params);
+#endif
+
     return VENDOR_CALL(device, set_parameters, params);
 }
 
@@ -301,7 +306,14 @@ char* camera_get_parameters(struct camera_device * device)
     if(!device)
         return NULL;
 
-    return VENDOR_CALL(device, get_parameters);
+    char* params;
+    params = VENDOR_CALL(device, get_parameters);
+
+#ifdef LOG_PARAMETERS
+    __android_log_write(4, "CODEWORKX get_parameters: %s", params);
+#endif
+
+    return params;
 }
 
 static void camera_put_parameters(struct camera_device *device, char *parms)
@@ -311,6 +323,10 @@ static void camera_put_parameters(struct camera_device *device, char *parms)
 
     if(!device)
         return;
+
+#ifdef LOG_PARAMETERS
+    __android_log_write(4, "CODEWORKX put_parameters: %s", params);
+#endif
 
     VENDOR_CALL(device, put_parameters, parms);
 }
