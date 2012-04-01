@@ -22,13 +22,19 @@
 */
 
 #define LOG_NDEBUG 0
-//#define LOG_PARAMETERS
+#define LOG_PARAMETERS
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
 
 #include <utils/threads.h>
+#include <utils/String8.h>
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
+#include <camera/Camera.h>
+#include <camera/CameraParameters.h>
+#include <vector>
+
+using namespace std;
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -38,6 +44,10 @@ static int camera_device_open(const hw_module_t* module, const char* name,
 static int camera_device_close(hw_device_t* device);
 static int camera_get_number_of_cameras(void);
 static int camera_get_camera_info(int camera_id, struct camera_info *info);
+
+void camera_fixup_getparams(struct camera_device * device, char** settings);
+void camera_fixup_setparams(struct camera_device * device, char** settings);
+void camera_fixup_putparams(struct camera_device * device, char** settings);
 
 static struct hw_module_methods_t camera_module_methods = {
         open: camera_device_open
@@ -291,6 +301,8 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     if(!device)
         return -EINVAL;
 
+    camera_fixup_setparams(device, (char**)&params);
+
 #ifdef LOG_PARAMETERS
     __android_log_write(4, "set_parameters: %s", params);
 #endif
@@ -306,8 +318,8 @@ char* camera_get_parameters(struct camera_device * device)
     if(!device)
         return NULL;
 
-    char* params;
-    params = VENDOR_CALL(device, get_parameters);
+   char* params = VENDOR_CALL(device, get_parameters);
+   camera_fixup_getparams(device, &params);
 
 #ifdef LOG_PARAMETERS
     __android_log_write(4, "get_parameters: %s", params);
@@ -316,7 +328,7 @@ char* camera_get_parameters(struct camera_device * device)
     return params;
 }
 
-static void camera_put_parameters(struct camera_device *device, char *parms)
+static void camera_put_parameters(struct camera_device *device, char *params)
 {
     LOGV("%s", __FUNCTION__);
     LOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device, (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
@@ -324,11 +336,13 @@ static void camera_put_parameters(struct camera_device *device, char *parms)
     if(!device)
         return;
 
+    camera_fixup_putparams(device, (char**)&params);
+
 #ifdef LOG_PARAMETERS
     __android_log_write(4, "put_parameters: %s", params);
 #endif
 
-    VENDOR_CALL(device, put_parameters, parms);
+    VENDOR_CALL(device, put_parameters, params);
 }
 
 int camera_send_command(struct camera_device * device,
@@ -520,7 +534,125 @@ int camera_get_camera_info(int camera_id, struct camera_info *info)
     return gVendorModule->get_camera_info(camera_id, info);
 }
 
+void camera_fixup_getparams(struct camera_device * device, char** settings)
+{
+    android::CameraParameters params;
+    params.unflatten(android::String8(*settings));
 
+    params.remove(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES);
 
+    if(params.get("cam_mode"))
+    {
+        params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, "1920x1080,1280x720,640x480");
+        const char* videoSize = params.get(android::CameraParameters::KEY_VIDEO_SIZE);
 
+        if (android::String8(videoSize) == android::String8("1920x1080"))
+        {
+            LOGD("%s: setPreviewSize(1920, 1080)", __FUNCTION__);
+            params.setPreviewSize(1920, 1080);
+            LOGD("%s: setVideoSize(1920, 1080)", __FUNCTION__);
+            params.setVideoSize(1920, 1080);
+        }
+        else if (android::String8(videoSize) == android::String8("1280x720"))
+        {
+            LOGD("%s: setPreviewSize(1280, 720)", __FUNCTION__);
+            params.setPreviewSize(1280, 720);
+            LOGD("%s: setVideoSize(1280, 720)", __FUNCTION__);
+            params.setVideoSize(1280, 720);
+        }
+        else
+        {
+            LOGD("%s: setPreviewSize(640, 480)", __FUNCTION__);
+            params.setPreviewSize(640, 480);
+            LOGD("%s: setVideoSize(640, 480)", __FUNCTION__);
+            params.setVideoSize(640, 480);
+        }
+    }
 
+    android::String8 strParams = params.flatten();
+    *settings = new char[strParams.bytes()];
+    strcpy(*settings, strParams.string());
+
+    LOGD("%s: get parameters fixed up", __FUNCTION__);
+}
+
+void camera_fixup_setparams(struct camera_device * device, char** settings)
+{
+    android::CameraParameters params;
+    params.unflatten(android::String8(*settings));
+
+    if(params.get("cam_mode"))
+    {
+        const char* previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
+        params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, previewSize);
+        params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES, "1920x1080,1280x720,640x480");
+
+        if (android::String8(previewSize) == android::String8("1920x1080"))
+        {
+            LOGD("%s: setPreviewSize(1920, 1080)", __FUNCTION__);
+            params.setPreviewSize(1920, 1080);
+            LOGD("%s: setVideoSize(1920, 1080)", __FUNCTION__);
+            params.setVideoSize(1920, 1080);
+        }
+        else if (android::String8(previewSize) == android::String8("1280x720"))
+        {
+            LOGD("%s: setPreviewSize(1280, 720)", __FUNCTION__);
+            params.setPreviewSize(1280, 720);
+            LOGD("%s: setVideoSize(1280, 720)", __FUNCTION__);
+            params.setVideoSize(1280, 720);
+        }
+        else
+        {
+            LOGD("%s: setPreviewSize(640, 480)", __FUNCTION__);
+            params.setPreviewSize(640, 480);
+            LOGD("%s: setVideoSize(640, 480)", __FUNCTION__);
+            params.setVideoSize(640, 480);
+        }
+    }
+
+    android::String8 strParams = params.flatten();
+    *settings = new char[strParams.bytes()];
+    strcpy(*settings, strParams.string());
+
+    LOGD("%s: set parameters fixed up", __FUNCTION__);
+}
+
+void camera_fixup_putparams(struct camera_device * device, char** settings)
+{
+    android::CameraParameters params;
+    params.unflatten(android::String8(*settings));
+
+    if(params.get("cam_mode"))
+    {
+        const char* videoSize = params.get(android::CameraParameters::KEY_VIDEO_SIZE);
+        params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, videoSize);
+
+        if (android::String8(videoSize) == android::String8("1920x1080"))
+        {
+            LOGD("%s: setPreviewSize(1920, 1080)", __FUNCTION__);
+            params.setPreviewSize(1920, 1080);
+            LOGD("%s: setVideoSize(1920, 1080)", __FUNCTION__);
+            params.setVideoSize(1920, 1080);
+        }
+        else if (android::String8(videoSize) == android::String8("1280x720"))
+        {
+            LOGD("%s: setPreviewSize(1280, 720)", __FUNCTION__);
+            params.setPreviewSize(1280, 720);
+            LOGD("%s: setVideoSize(1280, 720)", __FUNCTION__);
+            params.setVideoSize(1280, 720);
+        }
+        else
+        {
+            LOGD("%s: setPreviewSize(640, 480)", __FUNCTION__);
+            params.setPreviewSize(640, 480);
+            LOGD("%s: setVideoSize(640, 480)", __FUNCTION__);
+            params.setVideoSize(640, 480);
+        }
+    }
+
+    android::String8 strParams = params.flatten();
+    *settings = new char[strParams.bytes()];
+    strcpy(*settings, strParams.string());
+
+    LOGD("%s: put parameters fixed up", __FUNCTION__);
+}
