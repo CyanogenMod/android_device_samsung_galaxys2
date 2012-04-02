@@ -21,14 +21,19 @@
 *
 */
 
+/*
 #define LOG_NDEBUG 0
-//#define LOG_PARAMETERS
+#define LOG_PARAMETERS
+*/
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
 
 #include <utils/threads.h>
+#include <utils/String8.h>
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
+#include <camera/Camera.h>
+#include <camera/CameraParameters.h>
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -61,6 +66,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
 
 typedef struct wrapper_camera_device {
     camera_device_t base;
+    int id;
     camera_device_t *vendor;
 } wrapper_camera_device_t;
 
@@ -68,6 +74,8 @@ typedef struct wrapper_camera_device {
     wrapper_camera_device_t *__wrapper_dev = (wrapper_camera_device_t*) device; \
     __wrapper_dev->vendor->ops->func(__wrapper_dev->vendor, ##__VA_ARGS__); \
 })
+
+#define CAMERA_ID(device) (((wrapper_camera_device_t *)(device))->id)
 
 static int check_vendor_module()
 {
@@ -81,6 +89,52 @@ static int check_vendor_module()
     if (rv)
         LOGE("failed to open vendor camera module");
     return rv;
+}
+
+const static char * video_preview_sizes[] = {
+    "1920x1080,1280x720,640x480",
+    "640x480,352x288,320x240,176x144"
+};
+
+static char * camera_fixup_getparams(int id, const char * settings)
+{
+    android::CameraParameters params;
+    params.unflatten(android::String8(settings));
+
+    params.remove(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES);
+
+    if(params.get("cam_mode"))
+    {
+        params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, video_preview_sizes[id]);
+        const char* videoSize = params.get(android::CameraParameters::KEY_VIDEO_SIZE);
+        params.set(android::CameraParameters::KEY_PREVIEW_SIZE, videoSize);
+    }
+
+    android::String8 strParams = params.flatten();
+    char *ret = strdup(strParams.string());
+
+    LOGD("%s: get parameters fixed up", __FUNCTION__);
+    return ret;
+}
+
+char * camera_fixup_setparams(int id, const char * settings)
+{
+    android::CameraParameters params;
+    params.unflatten(android::String8(settings));
+
+    if(params.get("cam_mode"))
+    {
+        const char* previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
+        params.set(android::CameraParameters::KEY_VIDEO_SIZE, previewSize);
+        params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, previewSize);
+        params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES, video_preview_sizes[id]);
+    }
+
+    android::String8 strParams = params.flatten();
+    char *ret = strdup(strParams.string());
+
+    LOGD("%s: set parameters fixed up", __FUNCTION__);
+    return ret;
 }
 
 /*******************************************************************
@@ -291,11 +345,15 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     if(!device)
         return -EINVAL;
 
+    char *tmp = NULL;
+    tmp = camera_fixup_setparams(CAMERA_ID(device), params);
+
 #ifdef LOG_PARAMETERS
-    __android_log_write(4, "set_parameters: %s", params);
+    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, tmp);
 #endif
 
-    return VENDOR_CALL(device, set_parameters, params);
+    int ret = VENDOR_CALL(device, set_parameters, tmp);
+    return ret;
 }
 
 char* camera_get_parameters(struct camera_device * device)
@@ -306,11 +364,18 @@ char* camera_get_parameters(struct camera_device * device)
     if(!device)
         return NULL;
 
-    char* params;
-    params = VENDOR_CALL(device, get_parameters);
+    char* params = VENDOR_CALL(device, get_parameters);
 
 #ifdef LOG_PARAMETERS
-    __android_log_write(4, "get_parameters: %s", params);
+    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, params);
+#endif
+
+    char * tmp = camera_fixup_getparams(CAMERA_ID(device), params);
+    VENDOR_CALL(device, put_parameters, params);
+    params = tmp;
+
+#ifdef LOG_PARAMETERS
+    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, params);
 #endif
 
     return params;
@@ -321,14 +386,8 @@ static void camera_put_parameters(struct camera_device *device, char *params)
     LOGV("%s", __FUNCTION__);
     LOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device, (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
 
-    if(!device)
-        return;
-
-#ifdef LOG_PARAMETERS
-    __android_log_write(4, "put_parameters: %s", params);
-#endif
-
-    VENDOR_CALL(device, put_parameters, params);
+    if(params)
+        free(params);
 }
 
 int camera_send_command(struct camera_device * device,
@@ -438,6 +497,7 @@ int camera_device_open(const hw_module_t* module, const char* name,
             goto fail;
         }
         memset(camera_device, 0, sizeof(*camera_device));
+        camera_device->id = cameraid;
 
         if(rv = gVendorModule->common.methods->open((const hw_module_t*)gVendorModule, name, (hw_device_t**)&(camera_device->vendor)))
         {
@@ -519,8 +579,3 @@ int camera_get_camera_info(int camera_id, struct camera_info *info)
         return 0;
     return gVendorModule->get_camera_info(camera_id, info);
 }
-
-
-
-
-
