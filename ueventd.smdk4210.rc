@@ -30,4 +30,3 @@
 /dev/akm8975              0660   system     system
 /dev/accelerometer        0660   system     system
 /dev/graphics/fb0         0777   root       graphics
-/dev/rfkill               0666   root       root
