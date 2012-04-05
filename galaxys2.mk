@@ -67,5 +67,39 @@ PRODUCT_COPY_FILES += $(foreach module,\
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/zImage:kernel
 
+# NFC
+PRODUCT_PACKAGES += \
+	nfc.exynos4 \
+	libnfc \
+	libnfc_jni \
+	Nfc \
+	Tag
+PRODUCT_COPY_FILES += \
+	frameworks/base/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
+
+# Commands to migrate prefs from com.android.nfc3 to com.android.nfc
+PRODUCT_COPY_FILES += \
+	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
+
+# file that declares the MIFARE NFC constant
+PRODUCT_COPY_FILES += \
+	device/sample/nxp/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+
+# NFC EXTRAS add-on API
+PRODUCT_PACKAGES += \
+	com.android.nfc_extras
+PRODUCT_COPY_FILES += \
+	frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := device/samsung/galaxys2/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := device/samsung/galaxys2/nfcee_access_debug.xml
+endif
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/samsung/galaxys2/galaxys2-vendor.mk)
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
