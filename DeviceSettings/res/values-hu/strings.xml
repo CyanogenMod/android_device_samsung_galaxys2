@@ -18,7 +18,7 @@
     <string name="touchscreen_subcat_title">Érintőképernyő</string>
     <string name="touchscreen_sensitivity_title_head">Érzékenység</string>
     <string name="touchscreen_sensitivity_summary_head">Állítsd be az érintőképernyő érzékenységét</string>
-    
+
     <string name="category_sensors_title">Szenzorok</string>
     <string name="gyro_subcat_title">Giroszkóp</string>
     <string name="use_gyro_calibration_title_head">Használd a kalibrálási értékeket</string>
@@ -27,7 +27,7 @@
     <string name="calibrate_gyro_summary_head">Tedd a telefont egy vízszintes felületre, és nyomd meg ezt a gombot a kalibráláshoz</string>
     <string name="touchkey_subcat_title">Érintőgombok</string>
     <string name="touchkey_light_title_head">Érintőgombok háttérvilágítása</string>
-    <string name="touchkey_light_summary_head">Bekapcsolja az érintőgombok háttérvilágítását bekapcsolt képrnyőnél</string> 
+    <string name="touchkey_light_summary_head">Bekapcsolja az érintőgombok háttérvilágítását bekapcsolt képernyőnél</string>
 
     <string name="category_radio_title">GSM rádió</string>
     <string name="hspa_title_head">HSPA</string>
