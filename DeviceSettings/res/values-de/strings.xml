@@ -25,6 +25,9 @@
     <string name="use_gyro_calibration_summary_head">Benutze Kalibrierungswerte. Bitte nach Aktivierung eine Kalibrierung durchführen!</string>
     <string name="calibrate_gyro_title_head">Kalibrieren</string>
     <string name="calibrate_gyro_summary_head">Lege dein Telefon auf einen geraden Untergrund und starte die Kalibrierung.</string>
+    <string name="touchkey_subcat_title">Touch-Tasten</string>
+    <string name="touchkey_light_title_head">Aktiviere Tastenbeleuchtung</string>
+    <string name="touchkey_light_summary_head">Tasten leuchten auf während der Birdschirm aktiv ist</string>
 
     <string name="category_radio_title">Mobilfunk</string>
     <string name="hspa_title_head">HSPA</string>
