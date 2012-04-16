@@ -5,15 +5,15 @@
     <string name="screen_colors_title">Színek</string>
     <string name="category_mdnie_title">Kijelző</string>
     <string name="mdnie_scenario_title_head">Megjelenítés</string>
-    <string name="mdnie_scenario_summary_head">Állítsd be az mDNIe megjelenítést</string>
+    <string name="mdnie_scenario_summary_head">mDNIe megjelenítési beállítások</string>
     <string name="mdnie_mode_title_head">Üzemmód</string>
-    <string name="mdnie_mode_summary_head">Állítsd be az mDNIe üzemmódot</string>
+    <string name="mdnie_mode_summary_head">mDNIe üzemmódok</string>
     <string name="mdnie_negative_title_head">Negatív üzemmód</string>
     <string name="mdnie_negative_summary_head">Fordított színek ki/be</string>
     <string name="mdnie_outdoor_title_head">Szabadtéri üzemmód</string>
     <string name="mdnie_outdoor_summary_head">Szabadtéri üzemmód ki/be</string>
-    <string name="panel_gamma_title_head">Kijelző Gamma érték</string>
-    <string name="panel_gamma_summary_head">Állítsd be a kijelző gamma értékét</string>
+    <string name="panel_gamma_title_head">Kijelző gamma-értéke</string>
+    <string name="panel_gamma_summary_head">Kijelző gamma-érték beállítása</string>
 
     <string name="touchscreen_subcat_title">Érintőképernyő</string>
     <string name="touchscreen_sensitivity_title_head">Érzékenység</string>

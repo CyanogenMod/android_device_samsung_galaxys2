@@ -14,8 +14,8 @@
   <string-array name="mdnie_mode_entries">
     <item>Hagyományos (Alapbeállítás)</item>
     <item>Dinamikus</item>
-    <item>Natural</item>
-    <item>Movie</item>
+    <item>Természetes</item>
+    <item>Film</item>
   </string-array>
 
   <string-array name="mdnie_negative_entries">
