@@ -64,8 +64,14 @@ PRODUCT_COPY_FILES += $(foreach module,\
 	$(module):system/lib/modules/$(notdir $(module)))
 
 # The kernel itself
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+    LOCAL_KERNEL := device/samsung/galaxys2/kernel
+else
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/zImage:kernel
+    $(LOCAL_KERNEL):kernel
 
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/samsung/galaxys2/galaxys2-vendor.mk)
