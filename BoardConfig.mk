@@ -50,7 +50,10 @@ BOARD_NAND_PAGE_SIZE := 4096 -s 128
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 consoleblank=0
-TARGET_PREBUILT_KERNEL := device/samsung/galaxys2/zImage
+
+# Inline kernel building
+TARGET_KERNEL_SOURCE := kernel/samsung/smdk4210
+TARGET_KERNEL_CONFIG := cyanogenmod_galaxys2_defconfig
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
