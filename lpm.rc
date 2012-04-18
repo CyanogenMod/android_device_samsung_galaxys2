@@ -6,15 +6,17 @@ on init
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
-    export EXTERNAL_STORAGE /mnt/sdcard
-    export PHONE_STORAGE /mnt/emmc
+	export EXTERNAL_STORAGE /mnt/emmc
+    export SECONDARY_STORAGE /mnt/sdcard
 
     symlink /system/etc /etc
     mkdir /mnt 0775 root system
-    mkdir /mnt/sdcard 0000 system system
+
     mkdir /mnt/emmc 0000 system system
-    symlink /mnt/sdcard /sdcard
     symlink /mnt/emmc /emmc
+
+    mkdir /mnt/sdcard 0000 system system
+    symlink /mnt/sdcard /sdcard
 
     mkdir /preload
     mkdir /system
