@@ -272,16 +272,16 @@ on post-fs-data
     write /sys/devices/system/cpu/cpufreq/ondemand/down_differential 5
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 85
 
-on boot
-    chown system system /sys/class/backlight/pwm-backlight/brightness
-    chmod 0660 /sys/class/backlight/pwm-backlight/brightness
-    chown radio system /sys/devices/virtual/misc/melfas_touchkey/brightness
-    chmod 0660 /sys/devices/virtual/misc/melfas_touchkey/brightness
-
 #panorama directory creation
     mkdir /data/pxtmpdir 0775
     chown system system /data/pxtmpdir
     chmod 0775 /data/pxtmpdir
+
+# backlight permissions
+    chown system system /sys/class/backlight/pwm-backlight/brightness
+    chmod 0660 /sys/class/backlight/pwm-backlight/brightness
+    chown radio system /sys/devices/virtual/misc/melfas_touchkey/brightness
+    chmod 0660 /sys/devices/virtual/misc/melfas_touchkey/brightness
 
 # Permissions for dvfs lock
     chown system system /sys/power/cpufreq_max_limit
@@ -292,18 +292,22 @@ on boot
     chown system system /sys/power/gpu_lock
     chmod 0660 /sys/power/gpu_lock
 
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
-
-    setprop ro.build.product GT-I9100
-    setprop ro.product.device GT-I9100
-    setprop ro.radio.noril yes
-
 # Permisions for sensors
     chown radio system /sys/devices/virtual/K3G_GYRO-dev/k3g/gyro_selftest
     chown radio system /sys/devices/virtual/K3G_GYRO-dev/k3g/gyro_get_temp
     chown radio system /sys/devices/virtual/K3G_GYRO-dev/k3g/gyro_power_on
     chown radio system /sys/devices/virtual/accelerometer/accelerometer/acc_file
     chown radio system /sys/devices/virtual/sec/gsensorcal/calibration
+
+# for device encryption
+    setprop vold.post_fs_data_done 1
+
+on boot
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    setprop ro.build.product GT-I9100
+    setprop ro.product.device GT-I9100
+    setprop ro.radio.noril yes
 
 # permissions for NFC
     setprop ro.nfc.port "I2C"
