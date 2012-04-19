@@ -51,6 +51,7 @@ on fs
 on post-fs-data
 # insmod kernel modules
     insmod /lib/modules/Si4709_driver.ko
+    setprop vold.post_fs_data_done 1
     
 # mount param.lfs
     mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs
