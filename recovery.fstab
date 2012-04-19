@@ -9,5 +9,5 @@
 /data		ext4		/dev/block/mmcblk0p10
 /preload 	ext4		/dev/block/mmcblk0p12
 
-/sdcard		vfat		/dev/block/mmcblk0p11
-/emmc		vfat		/dev/block/mmcblk1p1
+/emmc		vfat		/dev/block/mmcblk0p11
+/sdcard		vfat		/dev/block/mmcblk1p1

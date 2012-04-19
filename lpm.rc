@@ -6,15 +6,17 @@ on init
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
-    export EXTERNAL_STORAGE /mnt/sdcard
-    export PHONE_STORAGE /mnt/emmc
+    export EXTERNAL_STORAGE /mnt/emmc
+    export SECONDARY_STORAGE /mnt/sdcard
 
     symlink /system/etc /etc
     mkdir /mnt 0775 root system
-    mkdir /mnt/sdcard 0000 system system
+
     mkdir /mnt/emmc 0000 system system
-    symlink /mnt/sdcard /sdcard
     symlink /mnt/emmc /emmc
+
+    mkdir /mnt/sdcard 0000 system system
+    symlink /mnt/sdcard /sdcard
 
     mkdir /preload
     mkdir /system
@@ -28,30 +30,30 @@ on init
     #mount /tmp /tmp tmpfs   
 
 on fs
-	mount ext4 /dev/block/mmcblk0p9 /system wait ro
-	mount ext4 /dev/block/mmcblk0p10 /data nosuid nodev noatime wait
+    mount ext4 /dev/block/mmcblk0p9 /system wait ro
+    mount ext4 /dev/block/mmcblk0p10 /data nosuid nodev noatime wait
 
-	mkdir /data/log 0777
-	mkdir /data/anr 0777
-	mount ext4 /dev/block/mmcblk0p10 /data remount ro
+    mkdir /data/log 0777
+    mkdir /data/anr 0777
+    mount ext4 /dev/block/mmcblk0p10 /data remount ro
 
-	chmod 0666 /dev/log/radio
-	chmod 0666 /dev/log/main
-	chmod 0666 /dev/log/event    
+    chmod 0666 /dev/log/radio
+    chmod 0666 /dev/log/main
+    chmod 0666 /dev/log/event
 
 on post-fs-data
 # param.lfs
-	mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
+    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
 
 on boot
 # CPU Frequency Governor
-	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
 
-	ifup lo
-	hostname localhost
-	domainname localdomain
+    ifup lo
+    hostname localhost
+    domainname localdomain
 
-	class_start default
+    class_start default
 
 service debuggerd /system/bin/debuggerd
 
