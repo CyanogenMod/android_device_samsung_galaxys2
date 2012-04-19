@@ -73,6 +73,7 @@ PRODUCT_PACKAGES := \
 # HAL
 PRODUCT_PACKAGES += \
     lights.exynos4 \
+    sensors.exynos4 \
     libhwconverter \
     libswconverter \
     libs5pjpeg \
