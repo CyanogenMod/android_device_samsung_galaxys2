@@ -51,21 +51,5 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys2/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
     device/samsung/galaxys2/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
 
-# Kernel modules for ramdisk
-RAMDISK_MODULES := $(addprefix device/samsung/galaxys2/modules/,dhd.ko \
-	scsi_wait_scan.ko Si4709_driver.ko)
-PRODUCT_COPY_FILES += $(foreach module,\
-	$(RAMDISK_MODULES),\
-	$(module):root/lib/modules/$(notdir $(module)))
-
-# Other kernel modules not in ramdisk
-PRODUCT_COPY_FILES += $(foreach module,\
-	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/modules/*.ko)),\
-	$(module):system/lib/modules/$(notdir $(module)))
-
-# The kernel itself
-PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/zImage:kernel
-
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/samsung/galaxys2/galaxys2-vendor.mk)
