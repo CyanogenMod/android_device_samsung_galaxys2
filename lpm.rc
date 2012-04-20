@@ -6,8 +6,9 @@ on init
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
-    export EXTERNAL_STORAGE /mnt/emmc
-    export SECONDARY_STORAGE /mnt/sdcard
+    export ANDROID_CACHE /cache
+    export SECONDARY_STORAGE /mnt/emmc
+    export EXTERNAL_STORAGE /mnt/sdcard
 
     symlink /system/etc /etc
     mkdir /mnt 0775 root system
