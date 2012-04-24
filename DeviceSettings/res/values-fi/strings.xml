@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S II-asetukset</string>
+
+    <string name="screen_colors_title">Värit</string>
+    <string name="category_mdnie_title">Näyttö</string>
+    <string name="mdnie_scenario_title_head">Skenaario</string>
+    <string name="mdnie_scenario_summary_head">Vaihda mDNIe-skenaario</string>
+    <string name="mdnie_mode_title_head">Tila</string>
+    <string name="mdnie_mode_summary_head">Vaihda mDNIe-tila</string>
+    <string name="mdnie_negative_title_head">Negatiivi-tila</string>
+    <string name="mdnie_negative_summary_head">Käytä käänteisiä värejä</string>
+    <string name="mdnie_outdoor_title_head">Ulkoilma-tila</string>
+    <string name="mdnie_outdoor_summary_head">Ota ulkoilma-tila käyttöön</string>
+    <string name="panel_gamma_title_head">Näytön gamma</string>
+    <string name="panel_gamma_summary_head">Säädä näytön gamma-arvo</string>
+
+    <string name="touchscreen_subcat_title">Kosketusnäyttö</string>
+    <string name="touchscreen_sensitivity_title_head">Kosketuksen herkkyys</string>
+    <string name="touchscreen_sensitivity_summary_head">Säädä näytön herkkyyttä</string>
+    
+    <string name="category_sensors_title">Sensorit</string>
+    <string name="gyro_subcat_title">Gyroskooppi</string>
+    <string name="use_gyro_calibration_title_head">Käytä kalibrointitietoja</string>
+    <string name="use_gyro_calibration_summary_head">Käytä gyroskoopin kalibrointiarvoja. Kalibroi merkattuasi tämän!</string>
+    <string name="calibrate_gyro_title_head">Kalibroi</string>
+    <string name="calibrate_gyro_summary_head">Aseta puhelin tasaiselle alustalle ja paina tätä kalibroidaksesi</string>
+    <string name="touchkey_subcat_title">Kosketusnäppäin</string>
+    <string name="touchkey_light_title_head">Ota näppäinvalot käyttöön</string>
+    <string name="touchkey_light_summary_head">Valot syttyvät kun näyttö on päällä</string> 
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Ota HSDPA/HSUPA käyttöön</string>
+</resources>
