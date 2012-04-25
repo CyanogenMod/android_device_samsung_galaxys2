@@ -3,9 +3,9 @@
     <string-array name="mdnie_scenario_entries">
         <item>Kamera (Oletus)</item>
         <item>Video</item>
-        <item>Video(L‰mmin)</item>
-        <item>Video(Kylm‰)</item>
-        <item>K‰yttˆliittym‰</item>
+        <item>Video(L√§mmin)</item>
+        <item>Video(Kylm√§)</item>
+        <item>K√§ytt√∂liittym√§</item>
         <item>Navigointi</item>
         <item>Galleria</item>
         <item>VT</item>
@@ -20,12 +20,12 @@
 
     <string-array name="mdnie_negative_entries">
         <item>Normaali</item>
-        <item>K‰‰nteinen</item>
+        <item>K√§√§nteinen</item>
     </string-array>
 
     <string-array name="mdnie_outdoor_entries">
-        <item>Pois p‰‰lt‰ (Oletus)</item>
-        <item>P‰‰ll‰</item>
+        <item>Pois p√§√§lt√§ (Oletus)</item>
+        <item>P√§√§ll√§</item>
     </string-array>
 
     <string-array name="panel_gamma_entries">
@@ -47,4 +47,5 @@
         <item>Vain HSDPA</item>
         <item>HSDPA + HSUPA</item>
     </string-array>
+
 </resources>
