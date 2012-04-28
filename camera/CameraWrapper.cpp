@@ -125,7 +125,6 @@ char * camera_fixup_setparams(int id, const char * settings)
     if(params.get("cam_mode"))
     {
         const char* previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
-        params.set(android::CameraParameters::KEY_VIDEO_SIZE, previewSize);
         params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, previewSize);
         params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES, video_preview_sizes[id]);
     }
