@@ -18,8 +18,10 @@
 -->
 
 <resources>
-	<!-- Samsung Camcorder Mode -->
-	<bool name="needsSamsungCamMode">true</bool>
-	<!-- Samsung Camera Settings -->
-	<bool name="hasSamsungCamSettings">true</bool>
+    <!-- Allows setting video size before recording starts -->
+    <bool name="needsEarlyVideoSize">true</bool>
+    <!-- Samsung Camcorder Mode -->
+    <bool name="needsSamsungCamMode">true</bool>
+    <!-- Samsung Camera Settings -->
+    <bool name="hasSamsungCamSettings">true</bool>
 </resources>
