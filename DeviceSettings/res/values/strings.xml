@@ -25,11 +25,14 @@
     <string name="use_gyro_calibration_summary_head">Use the gyroscope calibration values. Do a calibration after checking this!</string>
     <string name="calibrate_gyro_title_head">Calibrate</string>
     <string name="calibrate_gyro_summary_head">Put your phone on a flat surface, and press this to calibrate</string>
-    <string name="touchkey_subcat_title">Touch key</string>
+    <string name="touchkey_subcat_title">Touch keys</string>
     <string name="touchkey_light_title_head">Enable keys backlight</string>
-    <string name="touchkey_light_summary_head">Light up touch keys when screen is on</string> 
+    <string name="touchkey_light_summary_head">Light up touch keys when screen is on</string>
+    <string name="menu_swap_title_head">Menu key app switching</string>
+    <string name="menu_swap_summary_head">Restart required. Swap menu key with long press on home action</string>
 
     <string name="category_radio_title">Radio</string>
     <string name="hspa_title_head">HSPA</string>
     <string name="hspa_summary_head">Enable HSDPA/HSUPA</string>
+
 </resources>
