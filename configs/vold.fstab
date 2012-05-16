@@ -13,7 +13,7 @@
 ######################
 
 # internal sdcard
-dev_mount emmc /mnt/emmc 11 /devices/platform/dw_mmc/mmc_host/mmc0/mmc0 encryptable_nonremovable
+dev_mount emmc /mnt/emmc 11 /devices/platform/dw_mmc/mmc_host/mmc0/mmc0 nonremovable,encryptable
 
 # external sdcard
 dev_mount sdcard /mnt/sdcard auto /devices/platform/s3c-sdhci.2/mmc_host/mmc1
