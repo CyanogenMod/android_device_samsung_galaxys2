@@ -25,6 +25,13 @@
                 android:title="@string/touchkey_light_title_head"
                 android:summary="@string/touchkey_light_summary_head"
                 />
+
+    <!-- Menu swap  -->
+    <CheckBoxPreference
+                android:key="menu_swap"
+                android:title="@string/menu_swap_title_head"
+                android:summary="@string/menu_swap_summary_head"
+                />
     </PreferenceCategory>
 </PreferenceScreen>
 

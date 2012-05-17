@@ -26,6 +26,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.cyanogenmod.settings.device.R;
@@ -38,6 +39,9 @@ public class SensorsFragmentActivity extends PreferenceFragment {
     private static final String FILE_USE_GYRO_CALIB = "/sys/class/sec/gsensorcal/calibration";
     private static final String FILE_TOUCHKEY_LIGHT = "/data/.disable_touchlight";
     private static final String FILE_TOUCHKEY_TOGGLE = "/sys/class/sec/sec_touchkey/brightness";
+    private static final String FILE_MENU_SWAP = "/data/system/devices/keylayout/sec_touchkey.kl";
+
+    private static boolean sDisableRebootDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,22 @@ public class SensorsFragmentActivity extends PreferenceFragment {
         } else if (key.compareTo(DeviceSettings.KEY_TOUCHKEY_LIGHT) == 0) {
             Utils.writeValue(FILE_TOUCHKEY_LIGHT, ((CheckBoxPreference)preference).isChecked() ? "1" : "0");
             Utils.writeValue(FILE_TOUCHKEY_TOGGLE, ((CheckBoxPreference)preference).isChecked() ? "1" : "2");
+        } else if (key.compareTo(DeviceSettings.KEY_MENU_SWAP) == 0) {
+            // Show action overflow button in app UI
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.UI_FORCE_OVERFLOW_BUTTON,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            // Bind menu key to long-press on home key
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.LONG_PRESS_HOME_MENU,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            // Bind recent app switcher to menu key
+            Utils.writeValue(FILE_MENU_SWAP, ((CheckBoxPreference)preference).isChecked() ?
+                    "key 158   BACK          VIRTUAL\nkey 139   APP_SWITCH    VIRTUAL" :
+                    "key 158   BACK          VIRTUAL\nkey 139   MENU          VIRTUAL");
+            // Don't show dialog if user changes back to current setting
+            if (!sDisableRebootDialog) {
+                Utils.showDialog((Context)getActivity(), "Reboot required", "Change will take effect after phone reboots");
+            }
+            sDisableRebootDialog = !sDisableRebootDialog;
         }
 
         return true;

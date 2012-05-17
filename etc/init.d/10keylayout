@@ -1,0 +1,11 @@
+#!/system/bin/sh
+#
+# Create key layout file if not present
+#
+keylayoutfile=/data/system/devices/keylayout/sec_touchkey.kl;
+if [ ! -f $keylayoutfile ];
+then
+   mkdir -p /data/system/devices/keylayout;
+   echo "key 158   BACK          VIRTUAL\nkey 139   MENU          VIRTUAL" > $keylayoutfile;
+   chown system.system $keylayoutfile;
+fi;
