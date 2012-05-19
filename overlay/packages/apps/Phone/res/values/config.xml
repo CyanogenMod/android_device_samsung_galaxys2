@@ -18,6 +18,6 @@
 <resources>
 
     <!-- Flag indicating if the tty is enabled -->
-    <bool name="tty_enabled">true</bool>
+    <bool name="tty_enabled">false</bool>
 
 </resources>
