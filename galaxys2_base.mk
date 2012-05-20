@@ -77,7 +77,6 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
     lights.exynos4 \
     libhwconverter \
-    libswconverter \
     libs5pjpeg \
     libfimg
 
@@ -88,7 +87,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libstagefrighthw \
-    libcsc \
+    libseccscapi \
     libsecbasecomponent \
     libsecosal \
     libSEC_OMX_Resourcemanager \
@@ -176,4 +175,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Include exynos4 platform specific parts
-$(call inherit-product, hardware/samsung/exynos4/Android.mk)
+TARGET_HAL_PATH := hardware/samsung/exynos4/hal
+TARGET_OMX_PATH := hardware/samsung/exynos/multimedia/openmax
+$(call inherit-product, hardware/samsung/exynos4210.mk)
