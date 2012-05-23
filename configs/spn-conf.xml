@@ -51,6 +51,11 @@ examples:
 	
 <!-- Japan -->
     <spnOverride numeric="44010" spn="NTT DOCOMO"/>
+
+<!-- South Korea - SKT,KT,LGU -->
+    <spnOverride numeric="45005" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="45003,45005" fake_home_on="45005" />
+    <spnOverride numeric="45006" spn_display_rule="SPN_RULE_SHOW_SPN" fake_home_on="45006" />
+    <spnOverride numeric="45008" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="45002,45004,45008" fake_home_on="45008" />
 	
 <!-- Poland -->
     <spnOverride numeric="26006" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="26001"/>	
