@@ -13,38 +13,23 @@ on init
     symlink /system/etc /etc
     mkdir /mnt 0775 root system
 
-    mkdir /mnt/emmc 0000 system system
-    symlink /mnt/emmc /emmc
-
-    mkdir /mnt/sdcard 0000 system system
-    symlink /mnt/sdcard /sdcard
-
-    mkdir /preload
     mkdir /system
-    mkdir /data
-    mkdir /cache
-    mkdir /efs
     mkdir /tmp
-    mkdir /dbdata
     mkdir /mnt 0775 root root
     mkdir /mnt/.lfs 0775 root root
-    #mount /tmp /tmp tmpfs   
 
 on fs
-    mount ext4 /dev/block/mmcblk0p9 /system wait ro
-    mount ext4 /dev/block/mmcblk0p10 /data nosuid nodev noatime wait
+    mount ext4 /dev/block/mmcblk0p9 /system noatime wait ro
 
-    mkdir /data/log 0777
-    mkdir /data/anr 0777
-    mount ext4 /dev/block/mmcblk0p10 /data remount ro
+# insmod kernel modules
+    insmod /system/lib/modules/j4fs.ko
+
+# param.lfs
+    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
 
     chmod 0666 /dev/log/radio
     chmod 0666 /dev/log/main
     chmod 0666 /dev/log/event
-
-on post-fs-data
-# param.lfs
-    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
 
 on boot
 # CPU Frequency Governor
@@ -56,34 +41,40 @@ on boot
 
     class_start default
 
-service debuggerd /system/bin/debuggerd
-
 service ueventd /sbin/ueventd
+    class core
     critical
 
 service console /system/bin/sh
+    class core
     console
 
-service playlpm /system/bin/playlpm
-    user root
-
-service immvibed /system/bin/immvibed
-    oneshot
-
-service lpmkey /system/bin/lpmkey
-    user root
-
-# adbd is controlled by the persist.service.adb.enable system property
 service adbd /sbin/adbd
-#    disabled
+    disabled
 
-# adbd on at boot in emulator
-on property:ro.kernel.qemu=1
+service charger /charger
+    class charger
+    user root
+
+on charger
+    class_start charger
+
+# Always start adbd on userdebug and eng builds
+# In recovery, always run adbd as root.
+on property:ro.debuggable=1
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 04e8
+    write /sys/class/android_usb/android0/idProduct 6860
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/enable 1
+    write /sys/class/android_usb/android0/iManufacturer $ro.product.manufacturer
+    write /sys/class/android_usb/android0/iProduct $ro.product.model
+    write /sys/class/android_usb/android0/iSerial $ro.serialno
     start adbd
+    setprop service.adb.root 1
 
-on property:persist.service.adb.enable=1
-    start adbd
-
-on property:persist.service.adb.enable=0
-#    stop adbd
-
+# Restart adbd so it can run as root
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
