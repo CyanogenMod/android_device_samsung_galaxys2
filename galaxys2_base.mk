@@ -25,7 +25,8 @@ PRODUCT_COPY_FILES := \
 	device/samsung/galaxys2/lpm.rc:root/lpm.rc \
 	device/samsung/galaxys2/init.smdk4210.usb.rc:root/init.smdk4210.usb.rc \
 	device/samsung/galaxys2/init.smdk4210.rc:root/init.smdk4210.rc \
-	device/samsung/galaxys2/ueventd.smdk4210.rc:root/ueventd.smdk4210.rc
+	device/samsung/galaxys2/ueventd.smdk4210.rc:root/ueventd.smdk4210.rc \
+	device/samsung/galaxys2/param_patch.sh:recovery/root/sbin/param_patch.sh
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -79,6 +80,11 @@ PRODUCT_PACKAGES += \
     libhwconverter \
     libs5pjpeg \
     libfimg
+
+# Charger
+PRODUCT_PACKAGES += \
+	charger \
+	charger_res_images
 
 # MFC API
 PRODUCT_PACKAGES += \

@@ -20,8 +20,17 @@ on init
     mkdir /preload
     mount /tmp /tmp tmpfs
 
+    # param.lfs patcher
+    exec /sbin/param_patch.sh
+
 on fs
-    mount ext4 /dev/block/mmcblk0p9 /system
+    mount ext4 /dev/block/mmcblk0p9 /system noatime wait
+
+# insmod kernel modules
+    insmod /system/lib/modules/j4fs.ko
+
+# mount param.lfs
+    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs
 
 on boot
 # Permissions for mDNIe
