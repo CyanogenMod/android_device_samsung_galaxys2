@@ -20,9 +20,6 @@ on init
     mkdir /preload
     mount /tmp /tmp tmpfs
 
-on fs
-    mount ext4 /dev/block/mmcblk0p9 /system noatime wait
-
 # insmod kernel modules
     insmod /system/lib/modules/j4fs.ko
 
