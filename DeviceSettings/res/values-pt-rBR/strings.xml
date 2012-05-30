@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Configurações Galaxy S II</string>
+    <string name="screen_colors_title">Cores</string>
+    <string name="category_mdnie_title">Tela</string>
+    <string name="mdnie_scenario_title_head">Cenário</string>
+    <string name="mdnie_scenario_summary_head">Definir o Cenário mDNIe</string>
+    <string name="mdnie_mode_title_head">Modo</string>
+    <string name="mdnie_mode_summary_head">Definir o Modo mDNIe</string>
+    <string name="mdnie_negative_title_head">Modo Negativo</string>
+    <string name="mdnie_negative_summary_head">Ativar/Desativar cores invertidas</string>
+    <string name="mdnie_outdoor_title_head">Modo Ao Ar Livre</string>
+    <string name="mdnie_outdoor_summary_head">Ativar/Desativar modo ao ar livre</string>
+    <string name="panel_gamma_title_head">Gama da Tela</string>
+    <string name="panel_gamma_summary_head">Definir valor da gama da tela</string>
+    <string name="touchscreen_subcat_title">Tela sensível ao toque</string>
+    <string name="touchscreen_sensitivity_title_head">Sensitividade do toque</string>
+    <string name="touchscreen_sensitivity_summary_head">Definir a sensitividade do toque na tela</string>
+    <string name="category_sensors_title">Sensores</string>
+    <string name="gyro_subcat_title">Giroscópio</string>
+    <string name="use_gyro_calibration_title_head">Usar dados de calibração</string>
+    <string name="use_gyro_calibration_summary_head">Usar os valores de calibração do giroscópio. Fazer uma calibragem depois de selecionar isto!</string>
+    <string name="calibrate_gyro_title_head">Calibrar</string>
+    <string name="calibrate_gyro_summary_head">Coloque seu telefone em uma superfície plana, e pressione isto para calibrar</string>
+    <string name="touchkey_subcat_title">Tecla sensível ao toque</string>
+    <string name="touchkey_light_title_head">Ativar luz de fundo das teclas</string>
+    <string name="touchkey_light_summary_head">Acender as teclas sensíveis ao toque quando a tela estiver ligada</string>
+    <string name="category_radio_title">Rádio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Ativar HSDPA/HSUPA</string>
+</resources>
