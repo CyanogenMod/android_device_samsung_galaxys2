@@ -16,20 +16,7 @@ on init
     mkdir /system
     mkdir /tmp
     mkdir /mnt 0775 root root
-    mkdir /mnt/.lfs 0775 root root
 
-on fs
-    mount ext4 /dev/block/mmcblk0p9 /system noatime wait ro
-
-# insmod kernel modules
-    insmod /system/lib/modules/j4fs.ko
-
-# param.lfs
-    mount j4fs /dev/block/mmcblk0p4 /mnt/.lfs ro
-
-    chmod 0666 /dev/log/radio
-    chmod 0666 /dev/log/main
-    chmod 0666 /dev/log/event
 
 on boot
 # CPU Frequency Governor
@@ -53,11 +40,8 @@ service adbd /sbin/adbd
     disabled
 
 service charger /charger
-    class charger
+    class default
     user root
-
-on charger
-    class_start charger
 
 # Always start adbd on userdebug and eng builds
 # In recovery, always run adbd as root.
