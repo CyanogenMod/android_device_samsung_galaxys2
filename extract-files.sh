@@ -31,7 +31,6 @@ adb pull /system/lib/libsecril-client.so ../../../vendor/$MANUFACTURER/$DEVICE/p
 
 # AUDIO
 adb pull /system/lib/hw/alsa.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/alsa.default.so
-adb pull /system/lib/hw/audio.a2dp.default.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/audio.a2dp.default.so
 adb pull /system/lib/hw/audio.primary.exynos4.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/audio.primary.exynos4.so
 adb pull /system/lib/hw/audio_policy.exynos4.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/audio_policy.exynos4.so
 adb pull /system/lib/lib_Samsung_Acoustic_Module_Llite.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib_Samsung_Acoustic_Module_Llite.so
@@ -172,7 +171,6 @@ PRODUCT_COPY_FILES += \\
 # AUDIO
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/alsa.default.so:system/lib/hw/alsa.default.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/audio.primary.exynos4.so:system/lib/hw/audio.primary.exynos4.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/audio_policy.exynos4.so:system/lib/hw/audio_policy.exynos4.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \\

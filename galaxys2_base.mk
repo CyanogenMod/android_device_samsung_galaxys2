@@ -63,6 +63,7 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES := \
+    audio.a2dp.default \
     Camera \
     camera.exynos4 \
     com.android.future.usb.accessory \
