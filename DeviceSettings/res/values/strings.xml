@@ -29,6 +29,11 @@
     <string name="touchkey_light_title_head">Enable keys backlight</string>
     <string name="touchkey_light_summary_head">Light up touch keys when screen is on</string> 
 
+    <string name="category_haptic_title">Haptic</string>
+    <string name="vibrator_subcat_title">Vibrator</string>
+    <string name="vibrator_intensity_title_head">Vibrator Intensity</string>
+    <string name="vibrator_intensity_summary_head">Set vibrator intensity</string>
+
     <string name="category_radio_title">Radio</string>
     <string name="hspa_title_head">HSPA</string>
     <string name="hspa_summary_head">Enable HSDPA/HSUPA</string>

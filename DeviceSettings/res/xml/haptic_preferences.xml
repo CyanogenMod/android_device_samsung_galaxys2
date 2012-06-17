@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+                android:title="@string/vibrator_subcat_title">
+    <com.cyanogenmod.settings.device.VibratorIntensity
+                android:key="vibrator_intensity"
+                android:title="@string/vibrator_intensity_title_head"
+                android:summary="@string/vibrator_intensity_summary_head"
+                android:entries="@array/vibrator_intensity_entries"
+                android:entryValues="@array/vibrator_intensity_entries_values"
+                android:defaultValue="50" />
+    </PreferenceCategory>
+</PreferenceScreen>
