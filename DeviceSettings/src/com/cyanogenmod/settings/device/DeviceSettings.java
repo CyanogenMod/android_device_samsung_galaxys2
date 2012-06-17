@@ -45,6 +45,7 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_CALIBRATE_GYRO = "calibrate_gyro";
     public static final String KEY_TOUCHSCREEN_SENSITIVITY = "touchscreen_sensitivity";
     public static final String KEY_TOUCHKEY_LIGHT = "touchkey_light";
+    public static final String KEY_VIBRATOR_INTENSITY = "vibrator_intensity";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
@@ -69,6 +70,8 @@ public class DeviceSettings extends FragmentActivity {
                 mDNIeFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_sensors_title),
                 SensorsFragmentActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_haptic_title),
+                HapticFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));

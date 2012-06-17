@@ -42,6 +42,14 @@
         <item>100</item>
     </string-array>
 
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (Standard)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+
     <string-array name="hspa_entries">
 	    <item>Nur UMTS</item>
 	    <item>Nur HSDPA</item>

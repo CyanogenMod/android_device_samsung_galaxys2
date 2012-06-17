@@ -228,6 +228,8 @@ on post-fs-data
 # Vibetonz
     chmod 0660 /dev/tspdrv
     chown root shell /dev/tspdrv
+    chmod 0660 /sys/vibrator/pwm_val
+    chown system system /sys/vibrator/pwm_val
 
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/lcd_power
