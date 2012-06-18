@@ -64,10 +64,12 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>12</item>
-        <item>102</item>
-        <item>1002</item>
-        <item>10002</item>
+        <item>15</item>
+        <item>150</item>
+        <item>225</item>
+        <item>500</item>
+	<item>1000</item>
+	<item>3000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -75,11 +77,13 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>16</item>
+        <item>25</item>
         <item>40</item>
-        <item>60</item>
+        <item>50</item>
         <item>70</item>
-        <item>250</item>
+        <item>80</item>
+	<item>100</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -87,6 +91,7 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -107,10 +112,11 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
+        <item>0</item>
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">29</integer>
+    <integer name="config_screenBrightnessDim">10</integer>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
