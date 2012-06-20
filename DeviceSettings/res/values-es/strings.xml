@@ -27,8 +27,13 @@
     <string name="use_gyro_calibration_title_head">Usar datos de calibración</string>
     <string name="use_gyro_calibration_summary_head">Usar los datos de calibración del giroscopio. ¡Calibrar despues de activar!</string>
     <string name="calibrate_gyro_title_head">Calibrar</string>
-    <string name="calibrate_gyro_summary_head">Poner el dispositivo de una superficie plana y pulsar para calibrar</string>
+    <string name="calibrate_gyro_summary_head">Colocar el dispositivo en una superficie plana y pulsar para calibrar</string>
     <string name="touchkey_subcat_title">Botones Táctiles</string>
     <string name="touchkey_light_title_head">Activar iluminación</string>
     <string name="touchkey_light_summary_head">Iluminar los botones táctiles al encender la pantalla</string> 
+
+    <string name="category_haptic_title">Háptica</string>
+    <string name="vibrator_subcat_title">Vibración</string>
+    <string name="vibrator_intensity_title_head">Intensidad de vibración</string>
+    <string name="vibrator_intensity_summary_head">Establecer la intensidad de la vibración</string>
 </resources>
