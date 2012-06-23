@@ -1,59 +1,59 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="mdnie_scenario_entries">
-	    <item>Camera (Default)</item>
-	    <item>Video</item>
-	    <item>Video Warm</item>
-	    <item>Video Cold</item>
-	    <item>UI</item>
-	    <item>Navigation</item>
-	    <item>Gallery</item>
+        <item>Camera (Default)</item>
+        <item>Video</item>
+        <item>Video Warm</item>
+        <item>Video Cold</item>
+        <item>UI</item>
+        <item>Navigation</item>
+        <item>Gallery</item>
         <item>VT</item>
     </string-array>
 
     <string-array name="mdnie_scenario_entries_values" translatable="false">
-	    <item>4</item>
-	    <item>1</item>
-	    <item>2</item>
-	    <item>3</item>
-	    <item>0</item>
-	    <item>5</item>
-	    <item>6</item>
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+        <item>5</item>
+        <item>6</item>
         <item>7</item>
     </string-array>
 
     <string-array name="mdnie_mode_entries">
-	    <item>Standard (Default)</item>
-	    <item>Dynamic</item>
+        <item>Standard (Default)</item>
+        <item>Dynamic</item>
         <item>Natural</item>
-	    <item>Movie</item>
+        <item>Movie</item>
     </string-array>
 
     <string-array name="mdnie_mode_entries_values" translatable="false">
-	    <item>1</item>
-	    <item>0</item>
+        <item>1</item>
+        <item>0</item>
         <item>2</item>
-	    <item>3</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="mdnie_negative_entries">
-	    <item>Normal</item>
-	    <item>Inverted</item>
+        <item>Normal</item>
+        <item>Inverted</item>
     </string-array>
 
     <string-array name="mdnie_negative_entries_values" translatable="false">
         <item>0</item>
-	    <item>1</item>
+        <item>1</item>
     </string-array>
 
     <string-array name="mdnie_outdoor_entries">
-	    <item>Off (Default)</item>
-	    <item>On</item>
+        <item>Off (Default)</item>
+        <item>On</item>
     </string-array>
 
     <string-array name="mdnie_outdoor_entries_values" translatable="false">
-	    <item>0</item>
-	    <item>1</item>
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
     <string-array name="panel_gamma_entries">
@@ -101,13 +101,13 @@
     </string-array>
 
     <string-array name="hspa_entries">
-	    <item>UMTS Only</item>
-	    <item>HSDPA Only</item>
-	    <item>HSDPA + HSUPA</item>
+        <item>UMTS Only</item>
+        <item>HSDPA Only</item>
+        <item>HSDPA + HSUPA</item>
     </string-array>
 
     <string-array name="hspa_entries_values" translatable="false">
-	    <item>21</item>
+        <item>21</item>
         <item>22</item>
         <item>23</item>
     </string-array>
