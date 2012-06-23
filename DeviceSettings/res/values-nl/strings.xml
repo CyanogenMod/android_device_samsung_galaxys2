@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S II-instellingen</string>
+
+    <string name="screen_colors_title">Kleuren</string>
+    <string name="category_mdnie_title">Scherm</string>
+    <string name="mdnie_scenario_title_head">Scenario</string>
+    <string name="mdnie_scenario_summary_head">mDNIe-scenario instellen</string>
+    <string name="mdnie_mode_title_head">Modus</string>
+    <string name="mdnie_mode_summary_head">mDNIe-modus instellen</string>
+    <string name="mdnie_negative_title_head">Negatieve modus</string>
+    <string name="mdnie_negative_summary_head">Negatieve kleuren in-/uitschakelen</string>
+    <string name="mdnie_outdoor_title_head">Buitenmodus</string>
+    <string name="mdnie_outdoor_summary_head">Buitenmodus in-/uitschakelen</string>
+    <string name="panel_gamma_title_head">Schermgamma</string>
+    <string name="panel_gamma_summary_head">Schermgammawaarden instellen</string>
+
+    <string name="touchscreen_subcat_title">Aanraakscherm</string>
+    <string name="touchscreen_sensitivity_title_head">Aanraakgevoeligheid</string>
+    <string name="touchscreen_sensitivity_summary_head">Gevoeligheid aanraakscherm instellen</string>
+
+    <string name="category_sensors_title">Sensoren</string>
+    <string name="gyro_subcat_title">Gyroscoop</string>
+    <string name="use_gyro_calibration_title_head">Kalibratiegegevens gebruiken</string>
+    <string name="use_gyro_calibration_summary_head">Gebruik de kalibratiewaarden van de gyroscoop. Gelieve hierna een kalibratie te doen.</string>
+    <string name="calibrate_gyro_title_head">Kalibreren</string>
+    <string name="calibrate_gyro_summary_head">Plaats de telefoon op een vlakke ondergrond en tik hier om te kalibreren</string>
+    <string name="touchkey_subcat_title">Aanraakknop</string>
+    <string name="touchkey_light_title_head">Achtergrondlicht bij knoppen inschakelen</string>
+    <string name="touchkey_light_summary_head">Aanraakknoppen oplichten indien scherm aan is</string>
+
+    <string name="category_haptic_title">Haptisch</string>
+    <string name="vibrator_subcat_title">Trillen</string>
+    <string name="vibrator_intensity_title_head">Trilintensiteit</string>
+    <string name="vibrator_intensity_summary_head">Trilintensiteit instellen</string>
+
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">HSDPA/HSUPA inschakelen</string>
+</resources>
