@@ -140,6 +140,9 @@ BOARD_CHARGER_RES := device/samsung/galaxys2/res/charger
 # but better safe than sorry.
 BOARD_SUPPRESS_EMMC_WIPE := true
 
+# Enable WEBGL in WebKit
+ENABLE_WEBGL := true
+
 # assert
 TARGET_OTA_ASSERT_DEVICE := galaxys2,GT-I9100,GT-I9100M,GT-I9100P,GT-I9100T
 
