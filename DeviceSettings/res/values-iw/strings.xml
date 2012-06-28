@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">δβγψεϊ Galaxy S II</string>
+    <string name="app_name">Χ”Χ’Χ“Χ¨Χ•Χª Galaxy SII</string>
 
-    <string name="screen_colors_title">φαςιν</string>
-    <string name="category_mdnie_title">ξρκ</string>
-    <string name="mdnie_scenario_title_head">Scenario</string>
+    <string name="screen_colors_title">Χ¦Χ‘ΧΆΧ™Χ</string>
+    <string name="category_mdnie_title">ΧΧ΅Χ</string>
+    <string name="mdnie_scenario_title_head">Χ΅Χ‘Χ™Χ‘Χ”</string>
     <string name="mdnie_scenario_summary_head">Set the mDNIe Scenario</string>
-    <string name="mdnie_mode_title_head">ξφα</string>
+    <string name="mdnie_mode_title_head">ΧΧ¦Χ‘</string>
     <string name="mdnie_mode_summary_head">Set the mDNIe Mode</string>
-    <string name="mdnie_negative_title_head">ξφα πβθια</string>
-    <string name="mdnie_negative_summary_head">ΰτωψ/ΰμ-ϊΰτωψ δτιλϊ φαςιν</string>
-    <string name="mdnie_outdoor_title_head">ξφα "αηευ"</string>
-    <string name="mdnie_outdoor_summary_head">ΰτωψ/ΰμ-ϊΰτωψ ξφα "αηευ"</string>
+    <string name="mdnie_negative_title_head">ΧΧ¦Χ‘ Χ Χ’ΧΧ™Χ‘</string>
+    <string name="mdnie_negative_summary_head">ΧΧ¤Χ©Χ¨/ΧΧ-ΧªΧΧ¤Χ©Χ¨ Χ¦Χ‘ΧΆΧ™Χ Χ”Χ¤Χ•Χ›Χ™Χ</string>
+    <string name="mdnie_outdoor_title_head">ΧΧ¦Χ‘ "Χ‘Χ—Χ•Χ¥"</string>
+    <string name="mdnie_outdoor_summary_head">ΧΧ¤Χ©Χ¨/ΧΧ-ΧªΧΧ¤Χ©Χ¨ ΧΧ¦Χ‘ "Χ‘Χ—Χ•Χ¥"</string>
     <string name="panel_gamma_title_head">Screen Gamma</string>
     <string name="panel_gamma_summary_head">Set screen gamma value</string>
 
-    <string name="touchscreen_subcat_title">ξρκ ξβς</string>
-    <string name="touchscreen_sensitivity_title_head">ψβιωεϊ δξβς</string>
-    <string name="touchscreen_sensitivity_summary_head">δβγψ ψβιωεϊ ξρκ ξβς</string>
+    <string name="touchscreen_subcat_title">ΧΧ΅Χ ΧΧ’ΧΆ</string>
+    <string name="touchscreen_sensitivity_title_head">Χ¨Χ’Χ™Χ©Χ•Χª ΧΧ’ΧΆ</string>
+    <string name="touchscreen_sensitivity_summary_head">Χ”Χ’Χ“Χ¨ ΧΧª Χ¨Χ’Χ™Χ©Χ•Χª ΧΧ΅Χ Χ”ΧΧ’ΧΆ</string>
     
-    <string name="category_sensors_title">ηιιωπιν</string>
-    <string name="gyro_subcat_title">β'ιιψερχετ</string>
-    <string name="use_gyro_calibration_title_head">δωϊξω απϊεπι λιεμ</string>
-    <string name="use_gyro_calibration_summary_head">Use the gyroscope calibration values. Do a calibration after checking this!</string>
-    <string name="calibrate_gyro_title_head">λιιμ</string>
-    <string name="calibrate_gyro_summary_head">Put your phone on a flat surface, and press this to calibrate</string>
-    <string name="touchkey_subcat_title">ξχω ξβς</string>
-    <string name="touchkey_light_title_head">ΰτωψ ϊΰεψϊ μηφπιν</string>
-    <string name="touchkey_light_summary_head">δΰψ μηφπιν λΰωψ δξρκ γεμχ</string> 
+    <string name="category_sensors_title">Χ—Χ™Χ™Χ©Χ Χ™Χ</string>
+    <string name="gyro_subcat_title">Χ’'Χ™Χ™Χ¨Χ•Χ΅Χ§Χ•Χ¤</string>
+    <string name="use_gyro_calibration_title_head">Χ”Χ©ΧªΧΧ© Χ‘Χ ΧªΧ•Χ Χ™ Χ›Χ™Χ•Χ</string>
+    <string name="use_gyro_calibration_summary_head">Χ”Χ©ΧªΧΧ© Χ‘Χ ΧªΧ•Χ Χ™ Χ”Χ›Χ™Χ•Χ ΧΧ’'Χ™Χ™Χ¨Χ•Χ΅Χ§Χ•Χ¤, Χ›Χ™Χ™Χ ΧΧΧ—Χ¨ Χ‘Χ—Χ™Χ¨Χ”!</string>
+    <string name="calibrate_gyro_title_head">Χ›Χ™Χ™Χ</string>
+    <string name="calibrate_gyro_summary_head">Χ”Χ Χ— ΧΧª Χ”ΧΧΧ¤Χ•Χ ΧΆΧ ΧΧ©ΧΧ— ΧΧ•Χ¤Χ§Χ™, Χ•ΧΧ—Χ¥ Χ›Χ“Χ™ ΧΧ›Χ™Χ™Χ</string>
+    <string name="touchkey_subcat_title">ΧΧ§Χ©Χ™ Χ Χ’Χ™ΧΆΧ”</string>
+    <string name="touchkey_light_title_head">ΧΧ¤Χ©Χ¨ ΧªΧΧ•Χ¨Χ” ΧΧ—Χ•Χ¨Χ™Χª</string>
+    <string name="touchkey_light_summary_head">Χ”ΧΧ¨ ΧΧª ΧΧ§Χ©Χ™ Χ”Χ Χ’Χ™ΧΆΧ” Χ‘ΧΆΧª Χ©Χ”ΧΧ΅Χ Χ“Χ•ΧΧ§</string> 
 
-    <string name="category_haptic_title">ξωεα ξβς</string>
-    <string name="vibrator_subcat_title">ψθθ</string>
-    <string name="vibrator_intensity_title_head">ηεζχ ψθθ</string>
-    <string name="vibrator_intensity_summary_head">δβγψ ηεζχ ψθθ</string>
+    <string name="category_haptic_title">ΧΧ©Χ•Χ‘ Χ Χ’Χ™ΧΆΧ”</string>
+    <string name="vibrator_subcat_title">Χ¨ΧΧ</string>
+    <string name="vibrator_intensity_title_head">Χ—Χ•Χ–Χ§ Χ¨ΧΧ</string>
+    <string name="vibrator_intensity_summary_head">Χ”Χ’Χ“Χ¨ Χ—Χ•Χ–Χ§ Χ¨ΧΧ</string>
 
-    <string name="category_radio_title">ψγιε</string>
+    <string name="category_radio_title">Χ¨Χ“Χ™Χ•</string>
     <string name="hspa_title_head">HSPA</string>
-    <string name="hspa_summary_head">ΰτωψ HSDPA/HSUPA</string>
+    <string name="hspa_summary_head">ΧΧ¤Χ©Χ¨ HSDPA/HSUPA</string>
 </resources>
