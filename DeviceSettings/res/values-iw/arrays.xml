@@ -1,13 +1,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="mdnie_scenario_entries">
-	    <item>ξφμξδ (αψιψϊ-ξηγμ)</item>
-	    <item>ειγΰε</item>
-	    <item>ειγΰε ην</item>
-	    <item>ειγΰε χψ</item>
-	    <item>ξξωχ-ξωϊξω</item>
-	    <item>πιεεθ</item>
-	    <item>βμψιδ</item>
+	    <item>ΧΧ¦ΧΧΧ” (Χ‘Χ¨Χ™Χ¨Χª ΧΧ—Χ“Χ)</item>
+	    <item>Χ•Χ™Χ“ΧΧ•</item>
+	    <item>Χ•Χ™Χ“ΧΧ• Χ—Χ</item>
+	    <item>Χ•Χ™Χ“ΧΧ• Χ§Χ¨</item>
+	    <item>ΧΧΧ©Χ§-ΧΧ©ΧªΧΧ©</item>
+	    <item>Χ Χ™Χ•Χ•Χ</item>
+	    <item>Χ’ΧΧ¨Χ™Χ”</item>
         <item>VT</item>
     </string-array>
 
@@ -23,10 +23,10 @@
     </string-array>
 
     <string-array name="mdnie_mode_entries">
-	    <item>ρθπγψθι (αψιψϊ ξηγμ)</item>
-	    <item>ξωϊπδ</item>
-        <item>θαςι</item>
-	    <item>Movie</item>
+	    <item>Χ¨Χ’Χ™Χ (Χ‘Χ¨Χ™Χ¨Χª-ΧΧ—Χ“Χ)</item>
+	    <item>ΧΧ©ΧªΧ Χ”</item>
+        <item>ΧΧ‘ΧΆΧ™</item>
+	    <item>Χ΅Χ¨Χ</item>
     </string-array>
 
     <string-array name="mdnie_mode_entries_values" translatable="false">
@@ -37,8 +37,8 @@
     </string-array>
 
     <string-array name="mdnie_negative_entries">
-	    <item>ψβιμ</item>
-	    <item>δτεκ</item>
+	    <item>Χ¨Χ’Χ™Χ</item>
+	    <item>Χ”Χ¤Χ•Χ</item>
     </string-array>
 
     <string-array name="mdnie_negative_entries_values" translatable="false">
@@ -47,8 +47,8 @@
     </string-array>
 
     <string-array name="mdnie_outdoor_entries">
-	    <item>λαει (αψιψϊ-ξηγμ)</item>
-	    <item>τεςμ</item>
+	    <item>Χ›Χ‘Χ•Χ™ (Χ‘Χ¨Χ™Χ¨Χª-ΧΧ—Χ“Χ)</item>
+	    <item>Χ¤Χ•ΧΆΧ</item>
     </string-array>
 
     <string-array name="mdnie_outdoor_entries_values" translatable="false">
@@ -57,7 +57,7 @@
     </string-array>
 
     <string-array name="panel_gamma_entries">
-        <item>2.2 (Default)</item>
+        <item>2.2 (Χ‘Χ¨Χ™Χ¨Χª-ΧΧ—Χ“Χ)</item>
         <item>1.9</item>
     </string-array>
 
@@ -70,7 +70,7 @@
         <item>10</item>
         <item>20</item>
         <item>30</item>
-        <item>50 (Default)</item>
+        <item>50 (Χ‘Χ¨Χ™Χ¨Χª-ΧΧ—Χ“Χ)</item>
         <item>70</item>
         <item>100</item>
     </string-array>
@@ -87,7 +87,7 @@
     <string-array name="vibrator_intensity_entries">
         <item>0%</item>
         <item>25%</item>
-        <item>50% (Default)</item>
+        <item>50% (Χ‘Χ¨Χ™Χ¨Χª-ΧΧ—Χ“Χ)</item>
         <item>75%</item>
         <item>100%</item>
     </string-array>
@@ -101,8 +101,8 @@
     </string-array>
 
     <string-array name="hspa_entries">
-	    <item>UMTS αμαγ</item>
-	    <item>HSDPA αμαγ</item>
+	    <item>UMTS Χ‘ΧΧ‘Χ“</item>
+	    <item>HSDPA Χ‘ΧΧ‘Χ“</item>
 	    <item>HSDPA + HSUPA</item>
     </string-array>
 
