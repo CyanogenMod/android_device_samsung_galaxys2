@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">הגדרות Galaxy S II</string>
+
+    <string name="screen_colors_title">צבעים</string>
+    <string name="category_mdnie_title">מסך</string>
+    <string name="mdnie_scenario_title_head">Scenario</string>
+    <string name="mdnie_scenario_summary_head">Set the mDNIe Scenario</string>
+    <string name="mdnie_mode_title_head">מצב</string>
+    <string name="mdnie_mode_summary_head">Set the mDNIe Mode</string>
+    <string name="mdnie_negative_title_head">מצב נגטיב</string>
+    <string name="mdnie_negative_summary_head">אפשר/אל-תאפשר הפיכת צבעים</string>
+    <string name="mdnie_outdoor_title_head">מצב "בחוץ"</string>
+    <string name="mdnie_outdoor_summary_head">אפשר/אל-תאפשר מצב "בחוץ"</string>
+    <string name="panel_gamma_title_head">Screen Gamma</string>
+    <string name="panel_gamma_summary_head">Set screen gamma value</string>
+
+    <string name="touchscreen_subcat_title">מסך מגע</string>
+    <string name="touchscreen_sensitivity_title_head">רגישות המגע</string>
+    <string name="touchscreen_sensitivity_summary_head">הגדר רגישות מסך מגע</string>
+    
+    <string name="category_sensors_title">חיישנים</string>
+    <string name="gyro_subcat_title">ג'יירוסקופ</string>
+    <string name="use_gyro_calibration_title_head">השתמש בנתוני כיול</string>
+    <string name="use_gyro_calibration_summary_head">Use the gyroscope calibration values. Do a calibration after checking this!</string>
+    <string name="calibrate_gyro_title_head">כייל</string>
+    <string name="calibrate_gyro_summary_head">Put your phone on a flat surface, and press this to calibrate</string>
+    <string name="touchkey_subcat_title">מקש מגע</string>
+    <string name="touchkey_light_title_head">אפשר תאורת לחצנים</string>
+    <string name="touchkey_light_summary_head">האר לחצנים כאשר המסך דולק</string> 
+
+    <string name="category_haptic_title">משוב מגע</string>
+    <string name="vibrator_subcat_title">רטט</string>
+    <string name="vibrator_intensity_title_head">חוזק רטט</string>
+    <string name="vibrator_intensity_summary_head">הגדר חוזק רטט</string>
+
+    <string name="category_radio_title">רדיו</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">אפשר HSDPA/HSUPA</string>
+</resources>

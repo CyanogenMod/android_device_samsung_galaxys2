@@ -1,0 +1,115 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="mdnie_scenario_entries">
+	    <item>מצלמה (ברירת-מחדל)</item>
+	    <item>וידאו</item>
+	    <item>וידאו חם</item>
+	    <item>וידאו קר</item>
+	    <item>ממשק-משתמש</item>
+	    <item>ניווט</item>
+	    <item>גלריה</item>
+        <item>VT</item>
+    </string-array>
+
+    <string-array name="mdnie_scenario_entries_values" translatable="false">
+	    <item>4</item>
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	    <item>0</item>
+	    <item>5</item>
+	    <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries">
+	    <item>סטנדרטי (ברירת מחדל)</item>
+	    <item>משתנה</item>
+        <item>טבעי</item>
+	    <item>Movie</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries_values" translatable="false">
+	    <item>1</item>
+	    <item>0</item>
+        <item>2</item>
+	    <item>3</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries">
+	    <item>רגיל</item>
+	    <item>הפוך</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries_values" translatable="false">
+        <item>0</item>
+	    <item>1</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries">
+	    <item>כבוי (ברירת-מחדל)</item>
+	    <item>פועל</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries_values" translatable="false">
+	    <item>0</item>
+	    <item>1</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (Default)</item>
+        <item>1.9</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Default)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries_values" translatable="false">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (Default)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="vibrator_intensity_entries_values" translatable="false">
+        <item>0</item>
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="hspa_entries">
+	    <item>UMTS בלבד</item>
+	    <item>HSDPA בלבד</item>
+	    <item>HSDPA + HSUPA</item>
+    </string-array>
+
+    <string-array name="hspa_entries_values" translatable="false">
+	    <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+</resources>
