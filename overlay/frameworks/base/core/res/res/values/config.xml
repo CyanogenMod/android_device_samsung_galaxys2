@@ -147,6 +147,9 @@
         <item>dualmic_enabled=true=false</item>
     </string-array>
 
+    <!--Boolean to enable stk functionality on Samsung phones-->
+    <bool name="config_samsung_stk">true</bool>
+
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
