@@ -36,8 +36,8 @@ public class SensorsFragmentActivity extends PreferenceFragment {
     private static final String TAG = "GalaxyS2Parts_General";
 
     private static final String FILE_USE_GYRO_CALIB = "/sys/class/sec/gsensorcal/calibration";
-    private static final String FILE_TOUCHKEY_LIGHT = "/data/.disable_touchlight";
-    private static final String FILE_TOUCHKEY_TOGGLE = "/sys/class/sec/sec_touchkey/brightness";
+    private static final String FILE_TOUCHKEY_DISABLE = "/sys/class/sec/sec_touchkey/force_disable";
+    private static final String FILE_TOUCHKEY_BRIGHTNESS = "/sys/class/sec/sec_touchkey/brightness";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,12 @@ public class SensorsFragmentActivity extends PreferenceFragment {
         addPreferencesFromResource(R.xml.sensors_preferences);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+	if (((CheckBoxPreference)prefSet.findPreference(DeviceSettings.KEY_TOUCHKEY_LIGHT)).isChecked()) {
+	    prefSet.findPreference(DeviceSettings.KEY_TOUCHKEY_TIMEOUT).setEnabled(true);
+	} else {
+	    prefSet.findPreference(DeviceSettings.KEY_TOUCHKEY_TIMEOUT).setEnabled(false);
+	}
 
     }
 
@@ -67,8 +73,15 @@ public class SensorsFragmentActivity extends PreferenceFragment {
             Utils.writeValue(FILE_USE_GYRO_CALIB, "1");
             Utils.showDialog((Context)getActivity(), "Calibration done", "The gyroscope has been successfully calibrated!");
         } else if (key.compareTo(DeviceSettings.KEY_TOUCHKEY_LIGHT) == 0) {
-            Utils.writeValue(FILE_TOUCHKEY_LIGHT, ((CheckBoxPreference)preference).isChecked() ? "1" : "0");
-            Utils.writeValue(FILE_TOUCHKEY_TOGGLE, ((CheckBoxPreference)preference).isChecked() ? "1" : "2");
+		    if (((CheckBoxPreference)preference).isChecked()) {
+		        Utils.writeValue(FILE_TOUCHKEY_DISABLE, "0");
+		        Utils.writeValue(FILE_TOUCHKEY_BRIGHTNESS, "1");
+		        preferenceScreen.findPreference(DeviceSettings.KEY_TOUCHKEY_TIMEOUT).setEnabled(true);
+		    } else {
+		        Utils.writeValue(FILE_TOUCHKEY_DISABLE, "1");
+		        Utils.writeValue(FILE_TOUCHKEY_BRIGHTNESS, "2");
+		        preferenceScreen.findPreference(DeviceSettings.KEY_TOUCHKEY_TIMEOUT).setEnabled(false);
+		    }
         }
 
         return true;
@@ -88,6 +101,19 @@ public class SensorsFragmentActivity extends PreferenceFragment {
         if (gyroCalib.compareTo("1") != 0)
             Utils.writeValue(FILE_USE_GYRO_CALIB, gyroCalib);
 
-        Utils.writeValue(FILE_TOUCHKEY_LIGHT, sharedPrefs.getString(DeviceSettings.KEY_TOUCHKEY_LIGHT, "1"));
+        Boolean light = sharedPrefs.getBoolean(DeviceSettings.KEY_TOUCHKEY_LIGHT, true);
+        String disabled;
+        String brightness;
+
+        if (light == true) {
+            disabled = "0";
+            brightness = "1";
+        } else {
+            disabled = "1";
+            brightness = "2";
+        }
+
+        Utils.writeValue(FILE_TOUCHKEY_BRIGHTNESS, brightness);
+        Utils.writeValue(FILE_TOUCHKEY_DISABLE, disabled);
     }
 }
