@@ -28,6 +28,8 @@
     <string name="touchkey_subcat_title">Touch key</string>
     <string name="touchkey_light_title_head">Enable keys backlight</string>
     <string name="touchkey_light_summary_head">Light up touch keys when screen is on</string> 
+    <string name="touchkey_timeout_title_head">Backlight timeout</string>
+    <string name="touchkey_timeout_summary_head">Delay after a keypress before backlight turns off</string>
 
     <string name="category_haptic_title">Haptic</string>
     <string name="vibrator_subcat_title">Vibrator</string>

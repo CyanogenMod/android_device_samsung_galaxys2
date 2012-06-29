@@ -24,6 +24,15 @@
                 android:key="touchkey_light"
                 android:title="@string/touchkey_light_title_head"
                 android:summary="@string/touchkey_light_summary_head"
+                android:defaultValue="true"
+                />
+    <com.cyanogenmod.settings.device.TouchkeyTimeout
+                android:key="touchkey_timeout"
+                android:title="@string/touchkey_timeout_title_head"
+                android:summary="@string/touchkey_timeout_summary_head"
+                android:entries="@array/touchkey_timeout_entries"
+                android:entryValues="@array/touchkey_timeout_entries_values"
+                android:defaultValue="3"
                 />
     </PreferenceCategory>
 </PreferenceScreen>
