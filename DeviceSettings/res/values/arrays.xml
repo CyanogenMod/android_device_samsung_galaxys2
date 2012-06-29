@@ -112,4 +112,28 @@
         <item>23</item>
     </string-array>
 
+    <string-array name="touchkey_timeout_entries">
+            <item>Never</item>
+            <item>3 seconds</item>
+            <item>4 seconds</item>
+            <item>5 seconds (default)</item>
+            <item>6 seconds</item>
+            <item>8 seconds</item>
+            <item>10 seconds</item>
+            <item>15 seconds</item>
+            <item>20 seconds</item>
+    </string-array>
+
+    <string-array name="touchkey_timeout_entries_values" translatable="false">
+            <item>0</item>
+            <item>3</item>
+            <item>4</item>
+            <item>5</item>
+            <item>6</item>
+            <item>8</item>
+            <item>10</item>
+            <item>15</item>
+            <item>20</item>
+    </string-array>
+
 </resources>
