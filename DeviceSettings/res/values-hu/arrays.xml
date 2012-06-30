@@ -1,51 +1,51 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-  <string-array name="mdnie_scenario_entries">
-    <item>Kamera (Alapbeállítás)</item>
-    <item>Videó</item>
-    <item>Videó (Meleg árnyalat)</item>
-    <item>Videó (Hideg árnyalat)</item>
-    <item>Felhasználói felület</item>
-    <item>Navigáció</item>
-    <item>Galéria</item>
-    <item>VT</item>
-  </string-array>
+    <string-array name="mdnie_scenario_entries">
+        <item>Kamera (Alapbeállítás)</item>
+        <item>Videó</item>
+        <item>Videó (Meleg árnyalat)</item>
+        <item>Videó (Hideg árnyalat)</item>
+        <item>Felhasználói felület</item>
+        <item>Navigáció</item>
+        <item>Galéria</item>
+        <item>VT</item>
+    </string-array>
 
-  <string-array name="mdnie_mode_entries">
-    <item>Hagyományos (Alapbeállítás)</item>
-    <item>Dinamikus</item>
-    <item>Természetes</item>
-    <item>Film</item>
-  </string-array>
+    <string-array name="mdnie_mode_entries">
+        <item>Hagyományos (Alapbeállítás)</item>
+        <item>Dinamikus</item>
+        <item>Természetes</item>
+        <item>Film</item>
+    </string-array>
 
-  <string-array name="mdnie_negative_entries">
-    <item>Hagyományos</item>
-    <item>Fordított</item>
-  </string-array>
+    <string-array name="mdnie_negative_entries">
+        <item>Hagyományos</item>
+        <item>Fordított</item>
+    </string-array>
 
-  <string-array name="mdnie_outdoor_entries">
-    <item>Kikapcsolva (Alapbeállítás)</item>
-    <item>Bekapcsolva</item>
-  </string-array>
+    <string-array name="mdnie_outdoor_entries">
+        <item>Kikapcsolva (Alapbeállítás)</item>
+        <item>Bekapcsolva</item>
+    </string-array>
 
-  <string-array name="panel_gamma_entries">
-    <item>2.2 (Alapbeállítás)</item>
-    <item>1.9</item>
-  </string-array>
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (Alapbeállítás)</item>
+        <item>1.9</item>
+    </string-array>
 
-  <string-array name="touchscreen_sensitivity_entries">
-    <item>10</item>
-    <item>20</item>
-    <item>30</item>
-    <item>50 (Alapbeállítás)</item>
-    <item>70</item>
-    <item>100</item>
-  </string-array>
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Alapbeállítás)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
 
-  <string-array name="hspa_entries">
-    <item>UMTS</item>
-    <item>HSDPA</item>
-    <item>HSDPA + HSUPA</item>
-  </string-array>
+    <string-array name="hspa_entries">
+        <item>UMTS</item>
+        <item>HSDPA</item>
+        <item>HSDPA + HSUPA</item>
+    </string-array>
 
 </resources>

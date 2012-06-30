@@ -1,59 +1,50 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string-array name="mdnie_scenario_entries">
-        <item>Kamera (Standard)</item>
+        <item>Camera (standaard)</item>
         <item>Video</item>
-        <item>Video warm</item>
-        <item>Video kalt</item>
-        <item>UI</item>
-        <item>Navigation</item>
-        <item>Gallerie</item>
+        <item>Video (warm)</item>
+        <item>Video (koud)</item>
+        <item>Uiterlijk</item>
+        <item>Navigatie</item>
+        <item>Galerij</item>
         <item>VT</item>
     </string-array>
-
     <string-array name="mdnie_mode_entries">
-        <item>Standard</item>
+        <item>Standaard</item>
         <item>Dynamisch</item>
-        <item>Natürlich</item>
+        <item>Natuurlijk</item>
         <item>Film</item>
     </string-array>
-
     <string-array name="mdnie_negative_entries">
-        <item>Normal</item>
-        <item>Invertiert</item>
+        <item>Normaal</item>
+        <item>Omgedraaid</item>
     </string-array>
-
     <string-array name="mdnie_outdoor_entries">
-        <item>Deaktiviert</item>
-        <item>Aktiviert</item>
+        <item>Uit (standaard)</item>
+        <item>Aan</item>
     </string-array>
-
     <string-array name="panel_gamma_entries">
-        <item>2.2 (Standard)</item>
-        <item>1.9</item>
+        <item>2,2 (standaard)</item>
+        <item>1,9</item>
     </string-array>
-
     <string-array name="touchscreen_sensitivity_entries">
         <item>10</item>
         <item>20</item>
         <item>30</item>
-        <item>50 (Standard)</item>
+        <item>50 (standaard)</item>
         <item>70</item>
         <item>100</item>
     </string-array>
-
     <string-array name="vibrator_intensity_entries">
         <item>0%</item>
         <item>25%</item>
-        <item>50% (Standard)</item>
+        <item>50% (standaard)</item>
         <item>75%</item>
         <item>100%</item>
     </string-array>
-
     <string-array name="hspa_entries">
-        <item>Nur UMTS</item>
-        <item>Nur HSDPA</item>
-        <item>HSDPA + HSUPA</item>
+        <item>Alleen UMTS</item>
+        <item>Alleen HSDPA</item>
+        <item>HSDPA &amp; HSUPA</item>
     </string-array>
-
 </resources>
