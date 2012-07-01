@@ -36,7 +36,9 @@ public class Utils {
             FileOutputStream fos = new FileOutputStream(new File(filename));
             fos.write(value.getBytes());
             fos.flush();
-            fos.getFD().sync();
+            if (!filename.startsWith("/sys/")) {
+                fos.getFD().sync();
+            }
             fos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
