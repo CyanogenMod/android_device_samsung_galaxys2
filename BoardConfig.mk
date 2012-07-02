@@ -70,14 +70,14 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/galaxys2/releaseto
 # Graphics
 BOARD_EGL_CFG := device/samsung/galaxys2/configs/egl.cfg
 USE_OPENGL_RENDERER := true
+BOARD_HAVE_HDMI_SUPPORT := SAMSUNG_HDMI_SUPPORT
+BOARD_USES_FIMGAPI := true
 
 # Enable WEBGL in WebKit
 ENABLE_WEBGL := true
 
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
-BOARD_USE_SECTVOUT := true
-BOARD_USES_FIMGAPI := true
 
 # OMX
 BOARD_HAVE_CODEC_SUPPORT := SAMSUNG_CODEC_SUPPORT
