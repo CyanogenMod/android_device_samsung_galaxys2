@@ -1,0 +1,68 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="mdnie_scenario_entries">
+        <item>Камера (По умолч.)</item>
+        <item>Видео</item>
+        <item>Видео (тёпл.)</item>
+        <item>Видео (хол.)</item>
+        <item>Интерфейс</item>
+        <item>Навигация</item>
+        <item>Галерея</item>
+        <item>VT</item>
+    </string-array>
+
+    <string-array name="mdnie_mode_entries">
+        <item>Стандартный (По умолч.)</item>
+        <item>Динамический</item>
+        <item>Натуральный</item>
+        <item>Кино</item>
+    </string-array>
+
+    <string-array name="mdnie_negative_entries">
+        <item>Нормально</item>
+        <item>Инверсия</item>
+    </string-array>
+
+    <string-array name="mdnie_outdoor_entries">
+        <item>Выкл. (По умолч.)</item>
+        <item>Вкл.</item>
+    </string-array>
+
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (По умолч.)</item>
+        <item>1.9</item>
+    </string-array>
+
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (По умолч.)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (По умолч.)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="hspa_entries">
+        <item>Только UMTS</item>
+        <item>Только HSDPA</item>
+        <item>HSDPA + HSUPA</item>
+    </string-array>
+
+    <string-array name="touchkey_timeout_entries">
+        <item>Никогда</item>
+        <item>1 секунда</item>
+        <item>2 секунды</item>
+        <item>3 секунды (По умолч.)</item>
+        <item>4 секунды</item>
+        <item>5 секунд</item>
+        <item>6 секунд</item>
+    </string-array>
+</resources>
