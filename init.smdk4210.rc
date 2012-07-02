@@ -18,17 +18,6 @@ on early-init
 # Disable CFQ slice idle delay
     write /sys/block/mmcblk0/queue/iosched/slice_idle 0
 
-# FIXME: permissions for tvout
-    chmod 0777 /dev/graphics/fb0
-    chmod 0777 /dev/graphics/fb10
-    chmod 0777 /dev/graphics/fb11
-    chown media graphics /sys/class/switch/hdmi
-    chmod 0777 /sys/class/switch/hdmi
-
-# FIXME: permission for HDMI audio path
-    chown media audio /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
-    chmod 0777 /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
-
 on fs
 # mount ext4 partitions
     mount ext4 /dev/block/mmcblk0p9 /system noatime wait ro
@@ -237,6 +226,19 @@ on post-fs-data
     chown system media_rw /sys/class/lcd/panel/gamma_mode
     chown system media_rw /sys/class/lcd/panel/power_reduce
     chown system system /sys/class/backlight/panel/auto_brightness
+
+# Permissions for tvout
+    chmod 0666 /dev/graphics/fb0
+    chown media graphics /dev/graphics/fb10
+    chmod 0666 /dev/graphics/fb10
+    chown media graphics /dev/graphics/fb11
+    chmod 0666 /dev/graphics/fb11
+    chown media graphics /sys/class/switch/hdmi
+    chmod 0666 /sys/class/switch/hdmi
+
+# Permission for HDMI audio path
+    chown media audio /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
+    chmod 0666 /sys/class/hdmi_audio/hdmi_audio/hdmi_audio_set_ext
 
 # Permissions for mDNIe
     chown system media_rw /sys/class/mdnie/mdnie/mode
