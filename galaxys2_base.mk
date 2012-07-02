@@ -78,7 +78,14 @@ PRODUCT_PACKAGES += \
     lights.exynos4 \
     libhwconverter \
     libs5pjpeg \
-    libfimg
+    libfimc \
+    libfimg \
+	libhdmi \
+	libcec \
+	libddc \
+	libedid \
+	libhdmiclient \
+	libTVOut
 
 # Charger
 PRODUCT_PACKAGES += \

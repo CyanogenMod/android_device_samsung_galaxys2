@@ -236,7 +236,8 @@ EOF
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__COMMON__/proprietary/libTVOut.so:obj/lib/libTVOut.so \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/libfimc.so:obj/lib/libfimc.so
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libfimc.so:obj/lib/libfimc.so \\
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libhdmi.so:obj/lib/libhdmi.so
 
 # EGL
 PRODUCT_COPY_FILES += \\
