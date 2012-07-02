@@ -21,4 +21,5 @@
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
 	<uses-permission android:name="android.permission.BROADCAST_STICKY"></uses-permission>
 	<uses-permission android:name="android.permission.FACTORY_TEST"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER"></uses-permission>
 </manifest> 
