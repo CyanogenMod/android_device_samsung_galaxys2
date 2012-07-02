@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Настройки Galaxy S II</string>
+
+    <string name="screen_colors_title">Цвета</string>
+    <string name="category_mdnie_title">Экран</string>
+    <string name="mdnie_scenario_title_head">Сценарий</string>
+    <string name="mdnie_scenario_summary_head">Установка сценария mDNIe</string>
+    <string name="mdnie_mode_title_head">Режим</string>
+    <string name="mdnie_mode_summary_head">Установка режима mDNIe</string>
+    <string name="mdnie_negative_title_head">Негатив</string>
+    <string name="mdnie_negative_summary_head">Вкл./выкл. инверсии цветов</string>
+    <string name="mdnie_outdoor_title_head">Outdoor Mode</string>
+    <string name="mdnie_outdoor_summary_head">Enable/Disable outdoor mode</string>
+    <string name="panel_gamma_title_head">Гамма</string>
+    <string name="panel_gamma_summary_head">Установка значениё цветовой гаммы</string>
+
+    <string name="touchscreen_subcat_title">Сенсорный экран</string>
+    <string name="touchscreen_sensitivity_title_head">Чувствительность</string>
+    <string name="touchscreen_sensitivity_summary_head">Установка чувствительности сенсорного экрана</string>
+    
+    <string name="category_sensors_title">Датчики</string>
+    <string name="gyro_subcat_title">Гироскоп</string>
+    <string name="use_gyro_calibration_title_head">Данные калибровки</string>
+    <string name="use_gyro_calibration_summary_head">Использовать значения калибровки гироскопа. Перед выбором этой опции выполните калибровку гироскопа!</string>
+    <string name="calibrate_gyro_title_head">Калибровка</string>
+    <string name="calibrate_gyro_summary_head">Положите телефон на ровную поверхности и нажмите Калибровка.</string>
+    <string name="touchkey_subcat_title">Сенсорные клавиши</string>
+    <string name="touchkey_light_title_head">Подсветка клавиш</string>
+    <string name="touchkey_light_summary_head">Включать подстветку сенсорных клавиш при включённом экране</string> 
+
+    <string name="category_haptic_title">Отклик</string>
+    <string name="vibrator_subcat_title">Вибрация</string>
+    <string name="vibrator_intensity_title_head">Интенсивность вибрации</string>
+    <string name="vibrator_intensity_summary_head">Установка интенсивности вибрации</string>
+
+    <string name="category_radio_title">Модем</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Включить HSDPA/HSUPA</string>
+</resources>
