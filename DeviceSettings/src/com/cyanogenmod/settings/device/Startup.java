@@ -31,6 +31,7 @@ public class Startup extends BroadcastReceiver {
         RadioFragmentActivity.restore(context);
         HapticFragmentActivity.restore(context);
         VibratorIntensity.restore(context);
+        SensorsFragmentActivity.restore(context);
     }
 
 }

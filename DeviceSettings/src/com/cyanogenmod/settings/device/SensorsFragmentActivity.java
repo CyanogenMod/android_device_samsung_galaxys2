@@ -80,13 +80,13 @@ public class SensorsFragmentActivity extends PreferenceFragment {
 
     public static void restore(Context context) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        String gyroCalib = sharedPrefs.getString(DeviceSettings.KEY_USE_GYRO_CALIBRATION, "1");
+        boolean gyroCalib = sharedPrefs.getBoolean(DeviceSettings.KEY_USE_GYRO_CALIBRATION, true);
 
         // When use gyro calibration value is set to 1, calibration is done at the same time, which
         // means it is reset at each boot, providing wrong calibration most of the time at each reboot.
         // So we only set it to "0" if user wants it, as it defaults to 1 at boot
-        if (gyroCalib.compareTo("1") != 0)
-            Utils.writeValue(FILE_USE_GYRO_CALIB, gyroCalib);
+        if (!gyroCalib)
+            Utils.writeValue(FILE_USE_GYRO_CALIB, "0");
 
         Utils.writeValue(FILE_TOUCHKEY_LIGHT, sharedPrefs.getString(DeviceSettings.KEY_TOUCHKEY_LIGHT, "1"));
     }
