@@ -140,13 +140,6 @@
         <item>"7,1"</item>
     </string-array>
 
-    <!-- Set additional audio parameters for incall audio
-         Usage: parameter=onstring=offstring
-         Examples: <item>realcall=on=off</item> <item>dualmic_enabled=true=false</item> <item>mic_boost=yes=no</item> -->
-    <string-array name="config_telephony_set_audioparameters" translatable="false">
-        <item>dualmic_enabled=true=false</item>
-    </string-array>
-
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->

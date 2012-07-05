@@ -17,7 +17,10 @@
 <!-- Tuna-specific phone app resources. -->
 <resources>
 
-    <!-- Flag indicating if the tty is enabled -->
-    <bool name="tty_enabled">false</bool>
+    <!-- Determines if device implements a noise suppression device for in call audio-->
+    <bool name="has_in_call_noise_suppression">true</bool>
+
+    <!-- Audio parameter for setting noise suppression-->
+    <string name="in_call_noise_suppression_audioparameter">dualmic_enabled=true=false</string>
 
 </resources>
