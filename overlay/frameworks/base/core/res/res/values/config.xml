@@ -49,6 +49,16 @@
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
 
+    <!-- In case the sensor hal is reporting a wrong max range for the light sensor,
+         set this > 0 to fake the range value at SensorManager.
+         Depends on "config_light_sensor_resolution" -->
+    <integer translatable="false" name="config_light_sensor_range">16000</integer>
+
+    <!-- In case the sensor hal is reporting a wrong resolution for the light sensor,
+         set this > 0 to fake the resolution value at SensorManager.
+         Depends on "config_light_sensor_range" -->
+    <integer translatable="false" name="config_light_sensor_resolution">1</integer>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">false</bool>
