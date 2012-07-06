@@ -67,11 +67,13 @@ public class SensorsFragmentActivity extends PreferenceFragment {
             boxValue = (((CheckBoxPreference)preference).isChecked() ? "1" : "0");
             Utils.writeValue(FILE_USE_GYRO_CALIB, boxValue);
         } else if (key.compareTo(DeviceSettings.KEY_CALIBRATE_GYRO) == 0) {
-            // when calibration data utilization is disablen and enabled back,
+            // When calibration data utilization is disabled and enabled back,
             // calibration is done at the same time by driver
             Utils.writeValue(FILE_USE_GYRO_CALIB, "0");
             Utils.writeValue(FILE_USE_GYRO_CALIB, "1");
-            Utils.showDialog((Context)getActivity(), "Calibration done", "The gyroscope has been successfully calibrated!");
+            Utils.showDialog((Context)getActivity(),
+                getResources().getString(R.string.calibrate_gyro_done_title_head),
+                getResources().getString(R.string.calibrate_gyro_done_msg_head));
         } else if (key.compareTo(DeviceSettings.KEY_TOUCHKEY_LIGHT) == 0) {
             if (((CheckBoxPreference)preference).isChecked()) {
                 Utils.writeValue(FILE_TOUCHKEY_DISABLE, "0");
