@@ -87,7 +87,5 @@ public class SensorsFragmentActivity extends PreferenceFragment {
         // So we only set it to "0" if user wants it, as it defaults to 1 at boot
         if (!gyroCalib)
             Utils.writeValue(FILE_USE_GYRO_CALIB, "0");
-
-        Utils.writeValue(FILE_TOUCHKEY_LIGHT, sharedPrefs.getString(DeviceSettings.KEY_TOUCHKEY_LIGHT, "1"));
     }
 }
