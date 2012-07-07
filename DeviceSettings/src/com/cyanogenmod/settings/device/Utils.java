@@ -16,34 +16,96 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.SyncFailedException;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Context;
 
 public class Utils {
 
+    private static final String TAG = "GalaxyS2Settings_Utils";
+    private static final String TAG_READ = "GalaxyS2Settings_Utils_Read";
+    private static final String TAG_WRITE = "GalaxyS2Settings_Utils_Write";
+
     /**
      * Write a string value to the specified file.
-     * @param filename      The filename
-     * @param value         The value
+     * 
+     * @param filename The filename
+     * @param value The value
      */
     public static void writeValue(String filename, String value) {
+        FileOutputStream fos = null;
         try {
-            FileOutputStream fos = new FileOutputStream(new File(filename));
+            fos = new FileOutputStream(new File(filename), false);
             fos.write(value.getBytes());
             fos.flush();
-            if (!filename.startsWith("/sys/")) {
-                fos.getFD().sync();
+            // fos.getFD().sync();
+        } catch (FileNotFoundException ex) {
+            Log.w(TAG, "file " + filename + " not found: " + ex);
+        } catch (SyncFailedException ex) {
+            Log.w(TAG, "file " + filename + " sync failed: " + ex);
+        } catch (IOException ex) {
+            Log.w(TAG, "IOException trying to sync " + filename + ": " + ex);
+        } catch (RuntimeException ex) {
+            Log.w(TAG, "exception while syncing file: ", ex);
+        } finally {
+            if (fos != null) {
+                try {
+                    Log.w(TAG_WRITE, "file " + filename + ": " + value);
+                    fos.close();
+                } catch (IOException ex) {
+                    Log.w(TAG, "IOException while closing synced file: ", ex);
+                } catch (RuntimeException ex) {
+                    Log.w(TAG, "exception while closing file: ", ex);
+                }
             }
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * Write a string value to the specified file.
+     * 
+     * @param filename The filename
+     * @param value The value
+     */
+    public static void writeValue(String filename, Boolean value) {
+        FileOutputStream fos = null;
+        String sEnvia;
+        try {
+            fos = new FileOutputStream(new File(filename), false);
+            if (value)
+                sEnvia = "1";
+            else
+                sEnvia = "0";
+            fos.write(sEnvia.getBytes());
+            fos.flush();
+            // fos.getFD().sync();
+        } catch (FileNotFoundException ex) {
+            Log.w(TAG, "file " + filename + " not found: " + ex);
+        } catch (SyncFailedException ex) {
+            Log.w(TAG, "file " + filename + " sync failed: " + ex);
+        } catch (IOException ex) {
+            Log.w(TAG, "IOException trying to sync " + filename + ": " + ex);
+        } catch (RuntimeException ex) {
+            Log.w(TAG, "exception while syncing file: ", ex);
+        } finally {
+            if (fos != null) {
+                try {
+                    Log.w(TAG_WRITE, "file " + filename + ": " + value);
+                    fos.close();
+                } catch (IOException ex) {
+                    Log.w(TAG, "IOException while closing synced file: ", ex);
+                } catch (RuntimeException ex) {
+                    Log.w(TAG, "exception while closing file: ", ex);
+                }
+            }
         }
     }
 
