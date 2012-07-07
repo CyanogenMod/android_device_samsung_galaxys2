@@ -96,6 +96,8 @@ const static char * video_preview_sizes[] = {
     "640x480,352x288,320x240,176x144"
 };
 
+const static char * iso_values[] = {"auto,ISO50,ISO100,ISO200,ISO400,ISO800","auto"};
+
 static char * camera_fixup_getparams(int id, const char * settings)
 {
     android::CameraParameters params;
@@ -109,6 +111,8 @@ static char * camera_fixup_getparams(int id, const char * settings)
         const char* videoSize = params.get(android::CameraParameters::KEY_VIDEO_SIZE);
         params.set(android::CameraParameters::KEY_PREVIEW_SIZE, videoSize);
     }
+
+    params.set(android::CameraParameters::KEY_SUPPORTED_ISO_MODES, iso_values[id]);
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
@@ -127,6 +131,20 @@ char * camera_fixup_setparams(int id, const char * settings)
         const char* previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
         params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, previewSize);
         params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES, video_preview_sizes[id]);
+    }
+
+    if(params.get("iso")) {
+        const char* isoMode = params.get(android::CameraParameters::KEY_ISO_MODE);
+        if(strcmp(isoMode, "ISO50") == 0)
+            params.set(android::CameraParameters::KEY_ISO_MODE, "50");
+        else if(strcmp(isoMode, "ISO100") == 0)
+            params.set(android::CameraParameters::KEY_ISO_MODE, "100");
+        else if(strcmp(isoMode, "ISO200") == 0)
+            params.set(android::CameraParameters::KEY_ISO_MODE, "200");
+        else if(strcmp(isoMode, "ISO400") == 0)
+            params.set(android::CameraParameters::KEY_ISO_MODE, "400");
+        else if(strcmp(isoMode, "ISO800") == 0)
+            params.set(android::CameraParameters::KEY_ISO_MODE, "800");
     }
 
     android::String8 strParams = params.flatten();
