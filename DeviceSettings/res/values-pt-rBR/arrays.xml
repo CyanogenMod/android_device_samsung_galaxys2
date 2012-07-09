@@ -48,4 +48,20 @@
         <item>HSDPA + HSUPA</item>
     </string-array>
 
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (Padrão)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="touchkey_timeout_entries">
+        <item>Nunca</item>
+        <item>1 segundo</item>
+        <item>2 segundos</item>
+        <item>3 segundos (padrão)</item>
+        <item>4 segundos</item>
+        <item>5 segundos</item>
+        <item>6 segundos</item>
+    </string-array>
 </resources>

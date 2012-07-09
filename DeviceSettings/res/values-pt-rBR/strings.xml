@@ -8,18 +8,18 @@
     <string name="mdnie_mode_title_head">Modo</string>
     <string name="mdnie_mode_summary_head">Define o Modo mDNIe</string>
     <string name="mdnie_negative_title_head">Modo Negativo</string>
-    <string name="mdnie_negative_summary_head">Ativar/Desativar cores invertidas</string>
+    <string name="mdnie_negative_summary_head">Ativa/Desativa cores invertidas</string>
     <string name="mdnie_outdoor_title_head">Modo Ao Ar Livre</string>
-    <string name="mdnie_outdoor_summary_head">Ativar/Desativar modo ao ar livre</string>
+    <string name="mdnie_outdoor_summary_head">Ativa/Desativa modo ao ar livre</string>
     <string name="panel_gamma_title_head">Gama da Tela</string>
-    <string name="panel_gamma_summary_head">Definir valor da gama da tela</string>
+    <string name="panel_gamma_summary_head">Define valor da gama da tela</string>
     <string name="touchscreen_subcat_title">Tela sensível ao toque</string>
     <string name="touchscreen_sensitivity_title_head">Sensitividade do toque</string>
     <string name="touchscreen_sensitivity_summary_head">Define a sensitividade do toque na tela</string>
     <string name="category_sensors_title">Sensores</string>
     <string name="gyro_subcat_title">Giroscópio</string>
     <string name="use_gyro_calibration_title_head">Usar dados de calibração</string>
-    <string name="use_gyro_calibration_summary_head">Usar os valores de calibração do giroscópio. Fazer uma calibragem depois de selecionar isto!</string>
+    <string name="use_gyro_calibration_summary_head">Usa os valores de calibração do giroscópio. Calibre depois de selecionar isto!</string>
     <string name="calibrate_gyro_title_head">Calibrar</string>
     <string name="calibrate_gyro_summary_head">Coloque seu telefone em uma superfície plana, e pressione isto para calibrar</string>
     <string name="touchkey_subcat_title">Tecla sensível ao toque</string>
@@ -27,9 +27,11 @@
     <string name="touchkey_light_summary_head">Acender as teclas sensíveis ao toque quando a tela estiver ligada</string>
     <string name="category_radio_title">Rádio</string>
     <string name="hspa_title_head">HSPA</string>
-    <string name="hspa_summary_head">Ativar HSDPA/HSUPA</string>
+    <string name="hspa_summary_head">Ativa HSDPA/HSUPA</string>
     <string name="category_haptic_title">Resposta Tátil</string>
     <string name="vibrator_subcat_title">Vibração</string>
     <string name="vibrator_intensity_title_head">Intensidade da Vibração</string>
     <string name="vibrator_intensity_summary_head">Define a intensidade da vibração</string>
+    <string name="touchkey_timeout_title_head">Tempo limite da luz de fundo</string>
+    <string name="touchkey_timeout_summary_head">Quanto tempo a luz de fundo irá ficar acesa depois do botão ser pressionado</string>
 </resources>
