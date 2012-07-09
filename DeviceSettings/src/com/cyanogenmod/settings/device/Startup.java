@@ -32,6 +32,7 @@ public class Startup extends BroadcastReceiver {
         HapticFragmentActivity.restore(context);
         VibratorIntensity.restore(context);
         SensorsFragmentActivity.restore(context);
+        TouchkeyTimeout.restore(context);
     }
 
 }

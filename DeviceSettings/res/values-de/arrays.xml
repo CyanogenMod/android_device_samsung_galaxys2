@@ -56,4 +56,14 @@
         <item>HSDPA + HSUPA</item>
     </string-array>
 
+    <string-array name="touchkey_timeout_entries">
+            <item>Niemals</item>
+            <item>1 Sekunde</item>
+            <item>2 Sekunden</item>
+            <item>3 Sekunden (Standard)</item>
+            <item>4 Sekunden</item>
+            <item>5 Sekunden</item>
+            <item>6 Sekunden</item>
+    </string-array>
+
 </resources>
