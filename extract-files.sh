@@ -108,7 +108,6 @@ adb pull /system/cameradata/datapattern_front_420sp.yuv ../../../vendor/$MANUFAC
 
 # SENSORS
 adb pull /system/lib/libakm.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libakm.so
-adb pull /system/lib/hw/sensors.exynos4.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/sensors.exynos4.so
 
 # GPS
 adb pull /system/lib/hw/gps.exynos4.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/gps.exynos4.so
@@ -276,8 +275,7 @@ PRODUCT_COPY_FILES += \\
 
 # SENSORS
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/libakm.so:system/lib/libakm.so \\
-    vendor/__MANUFACTURER__/__COMMON__/proprietary/sensors.exynos4.so:system/lib/hw/sensors.exynos4.so
+    vendor/__MANUFACTURER__/__COMMON__/proprietary/libakm.so:system/lib/libakm.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
