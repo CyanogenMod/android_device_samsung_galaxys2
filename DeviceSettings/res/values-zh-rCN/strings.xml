@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy S II 设置</string>
+
+    <string name="screen_colors_title">颜色</string>
+    <string name="category_mdnie_title">屏幕</string>
+    <string name="mdnie_scenario_title_head">场景</string>
+    <string name="mdnie_scenario_summary_head">设置 mDNIe 场景</string>
+    <string name="mdnie_mode_title_head">模式</string>
+    <string name="mdnie_mode_summary_head">设置 mDNIe 模式</string>
+    <string name="mdnie_negative_title_head">负极模式</string>
+    <string name="mdnie_negative_summary_head">启用/禁用反色</string>
+    <string name="mdnie_outdoor_title_head">户外模式</string>
+    <string name="mdnie_outdoor_summary_head">启用/禁用户外模式</string>
+    <string name="panel_gamma_title_head">屏幕珈玛</string>
+    <string name="panel_gamma_summary_head">设置屏幕珈玛</string>
+
+    <string name="touchscreen_subcat_title">触摸屏</string>
+    <string name="touchscreen_sensitivity_title_head">触摸屏灵敏度</string>
+    <string name="touchscreen_sensitivity_summary_head">设置触摸屏灵敏度</string>
+
+    <string name="category_sensors_title">感应器</string>
+    <string name="gyro_subcat_title">陀螺仪</string>
+    <string name="use_gyro_calibration_title_head">使用校准数据</string>
+    <string name="use_gyro_calibration_summary_head">使用陀螺仪的校准数据。检查此之后请重新校准！</string>
+    <string name="calibrate_gyro_title_head">校准</string>
+    <string name="calibrate_gyro_summary_head">把手机放在平面上，然后选择此按键校准</string>
+    <string name="touchkey_subcat_title">触摸键</string>
+    <string name="touchkey_light_title_head">启用触摸键背光灯</string>
+    <string name="touchkey_light_summary_head">屏幕开启时触摸键将会点亮</string>
+    <string name="touchkey_timeout_title_head">背光灯超时</string>
+    <string name="touchkey_timeout_summary_head">设置背光灯超时时间</string>
+
+    <string name="category_haptic_title">振动</string>
+    <string name="vibrator_subcat_title">振动器</string>
+    <string name="vibrator_intensity_title_head">振动器强度</string>
+    <string name="vibrator_intensity_summary_head">设置振动器强度</string>
+
+    <string name="category_radio_title">无线电</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">启用 HSDPA/HSUPA</string>
+</resources>
