@@ -5,3 +5,5 @@
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/ttyS0
 persist.sys.strictmode.visual=0
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
