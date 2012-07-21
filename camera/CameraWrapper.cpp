@@ -92,7 +92,7 @@ static int check_vendor_module()
 }
 
 const static char * video_preview_sizes[] = {
-    "1920x1080,1280x720,640x480",
+    "1920x1080,1280x720,800x480,640x480",
     "640x480,352x288,320x240,176x144"
 };
 
@@ -105,7 +105,7 @@ static char * camera_fixup_getparams(int id, const char * settings)
 
     params.remove(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES);
 
-    if(params.get("cam_mode"))
+    if(params.get("cam_mode") && !strcmp(params.get("cam_mode"), "1"))
     {
         params.set(android::CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES, video_preview_sizes[id]);
         const char* videoSize = params.get(android::CameraParameters::KEY_VIDEO_SIZE);
@@ -126,24 +126,24 @@ char * camera_fixup_setparams(int id, const char * settings)
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
 
-    if(params.get("cam_mode"))
+    if(params.get("cam_mode") && !strcmp(params.get("cam_mode"), "1"))
     {
         const char* previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
         params.set(android::CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, previewSize);
         params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES, video_preview_sizes[id]);
     }
 
-    if(params.get("iso")) {
-        const char* isoMode = params.get(android::CameraParameters::KEY_ISO_MODE);
-        if(strcmp(isoMode, "ISO50") == 0)
+    const char* isoMode = params.get(android::CameraParameters::KEY_ISO_MODE);
+    if(isoMode) {
+        if(!strcmp(isoMode, "ISO50"))
             params.set(android::CameraParameters::KEY_ISO_MODE, "50");
-        else if(strcmp(isoMode, "ISO100") == 0)
+        else if(!strcmp(isoMode, "ISO100"))
             params.set(android::CameraParameters::KEY_ISO_MODE, "100");
-        else if(strcmp(isoMode, "ISO200") == 0)
+        else if(!strcmp(isoMode, "ISO200"))
             params.set(android::CameraParameters::KEY_ISO_MODE, "200");
-        else if(strcmp(isoMode, "ISO400") == 0)
+        else if(!strcmp(isoMode, "ISO400"))
             params.set(android::CameraParameters::KEY_ISO_MODE, "400");
-        else if(strcmp(isoMode, "ISO800") == 0)
+        else if(!strcmp(isoMode, "ISO800"))
             params.set(android::CameraParameters::KEY_ISO_MODE, "800");
     }
 
