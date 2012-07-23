@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Impostazioni Galaxy S II</string>
+    <string name="screen_colors_title">Colori</string>
+    <string name="category_mdnie_title">Schermo</string>
+    <string name="mdnie_scenario_title_head">Scenario</string>
+    <string name="mdnie_scenario_summary_head">Imposta lo scenario mDNIe</string>
+    <string name="mdnie_mode_title_head">Modalità</string>
+    <string name="mdnie_mode_summary_head">Imposta la modalità mDNIe</string>
+    <string name="mdnie_negative_title_head">Negativo</string>
+    <string name="mdnie_negative_summary_head">Abilita/disabilita i colori invertiti</string>
+    <string name="mdnie_outdoor_title_head">Esterno</string>
+    <string name="mdnie_outdoor_summary_head">Abilita/disabilita la modalità esterno</string>
+    <string name="panel_gamma_title_head">Gamma schermo</string>
+    <string name="panel_gamma_summary_head">Imposta il valore gamma dello schermo</string>
+    <string name="touchscreen_subcat_title">Schermo</string>
+    <string name="touchscreen_sensitivity_title_head">Sensibilità tocco</string>
+    <string name="touchscreen_sensitivity_summary_head">Impostare sensibilità al tocco dello schermo</string>
+    <string name="category_sensors_title">Sensori</string>
+    <string name="gyro_subcat_title">Giroscopio</string>
+    <string name="use_gyro_calibration_title_head">Usa i dati di calibrazione</string>
+    <string name="use_gyro_calibration_summary_head">Usa i valori di calibrazione del giroscopio. Effettuare una calibrazione dopo aver attivato questa impostazione!</string>
+    <string name="calibrate_gyro_title_head">Calibrazione</string>
+    <string name="calibrate_gyro_summary_head">Posizionare il telefono su una superficie orizzontale e premere per effettuare la calibrazione</string>
+    <string name="touchkey_subcat_title">Tasti a sfioramento</string>
+    <string name="touchkey_light_title_head">Retroilluminazione</string>
+    <string name="touchkey_light_summary_head">Abilita la retroilluminazione dei tasti a sfioramento quando lo schermo è attivo</string> 
+    <string name="touchkey_timeout_title_head">Timer retroilluminazione</string>
+    <string name="touchkey_timeout_summary_head">Imposta l\'intervallo dopo cui la retroilluminazione dei tasti si spegne</string>
+    <string name="category_haptic_title">Feedback tattile</string>
+    <string name="vibrator_subcat_title">Vibratore</string>
+    <string name="vibrator_intensity_title_head">Intensità della vibrazione</string>
+    <string name="vibrator_intensity_summary_head">Imposta l\'intensità della vibrazione</string>
+    <string name="category_radio_title">Radio</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Abilita HSDPA/HSUPA</string>
+</resources>
