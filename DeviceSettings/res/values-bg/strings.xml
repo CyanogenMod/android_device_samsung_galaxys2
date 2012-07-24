@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Настройки на Galaxy S II</string>
+
+    <string name="screen_colors_title">Цветове</string>
+    <string name="category_mdnie_title">Екран</string>
+    <string name="mdnie_scenario_title_head">mDNIe сценарий</string>
+    <string name="mdnie_scenario_summary_head">Променя тона, наситеността и остротата на изображението</string>
+    <string name="mdnie_mode_title_head">mDNIe режим</string>
+    <string name="mdnie_mode_summary_head">Променя тона на изображението</string>
+    <string name="mdnie_negative_title_head">Негативно изображение</string>
+    <string name="mdnie_negative_summary_head">Обръща цветовете</string>
+    <string name="mdnie_outdoor_title_head">Режим на открито</string>
+    <string name="mdnie_outdoor_summary_head">Увеличава яркостта и контраста</string>
+    <string name="panel_gamma_title_head">Гама</string>
+    <string name="panel_gamma_summary_head">Настройка на гамата на екрана</string>
+
+    <string name="touchscreen_subcat_title">Сензорен екран</string>
+    <string name="touchscreen_sensitivity_title_head">Чувствителност</string>
+    <string name="touchscreen_sensitivity_summary_head">Настройка на чувствителността при докосване на сензорния екран</string>
+    
+    <string name="category_sensors_title">Сензори</string>
+    <string name="gyro_subcat_title">Жироскоп</string>
+    <string name="use_gyro_calibration_title_head">Използвай данните от калибрирането</string>
+    <string name="use_gyro_calibration_summary_head">Използва данните от калибрирането на жироскопа. Направете калибриране след като отбележите това!</string>
+    <string name="calibrate_gyro_title_head">Калибрирай</string>
+    <string name="calibrate_gyro_summary_head">Поставете телефона на равна повърхност и натиснете тук, за да калибрирате жироскопа</string>
+    <string name="touchkey_subcat_title">Сензорни бутони</string>
+    <string name="touchkey_light_title_head">Подсветка</string>
+    <string name="touchkey_light_summary_head">Осветява сензорните бутони при докосване</string> 
+    <string name="touchkey_timeout_title_head">Продължителност на осветяването</string>
+    <string name="touchkey_timeout_summary_head">Колко време след докосване да бъдат осветявани бутоните</string>
+
+    <string name="category_haptic_title">Вибрация</string>
+    <string name="vibrator_subcat_title">Вибратор</string>
+    <string name="vibrator_intensity_title_head">Сила на вибрациите</string>
+    <string name="vibrator_intensity_summary_head">Настройка на силата на вибрациите</string>
+
+    <string name="category_radio_title">Мрежа</string>
+    <string name="hspa_title_head">HSPA</string>
+    <string name="hspa_summary_head">Включване на HSDPA/HSUPA</string>
+</resources>
