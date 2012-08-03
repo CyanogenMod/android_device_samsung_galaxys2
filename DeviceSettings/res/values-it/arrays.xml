@@ -1,0 +1,59 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="mdnie_scenario_entries">
+        <item>Macchina foto (Predefinito)</item>
+        <item>Video</item>
+        <item>Video caldo</item>
+        <item>Video freddo</item>
+        <item>UI</item>
+        <item>Navigazione</item>
+        <item>Galleria</item>
+        <item>VT</item>
+    </string-array>
+    <string-array name="mdnie_mode_entries">
+        <item>Standard (Predefinito)</item>
+        <item>Dinamico</item>
+        <item>Naturale</item>
+        <item>Film</item>
+    </string-array>
+    <string-array name="mdnie_negative_entries">
+        <item>Normale</item>
+        <item>Invertito</item>
+    </string-array>
+    <string-array name="mdnie_outdoor_entries">
+        <item>Off (Predefinito)</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="panel_gamma_entries">
+        <item>2.2 (Predefinito)</item>
+        <item>1.9</item>
+    </string-array>
+    <string-array name="touchscreen_sensitivity_entries">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50 (Predefinito)</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (Predefinito)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="hspa_entries">
+        <item>Solo UMTS</item>
+        <item>Solo HSDPA</item>
+        <item>HSDPA + HSUPA</item>
+    </string-array>
+    <string-array name="touchkey_timeout_entries">
+        <item>Mai</item>
+        <item>1 secondo</item>
+        <item>2 secondi</item>
+        <item>3 secondi (Predefinito)</item>
+        <item>4 secondi</item>
+        <item>5 secondi</item>
+        <item>6 secondi</item>
+    </string-array>
+</resources>
