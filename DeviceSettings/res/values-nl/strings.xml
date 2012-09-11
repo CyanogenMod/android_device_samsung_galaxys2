@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<!-- Copyright (C) 2012 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Galaxy S II-instellingen</string>
 
     <string name="screen_colors_title">Kleuren</string>
@@ -22,14 +37,16 @@
     <string name="category_sensors_title">Sensoren</string>
     <string name="gyro_subcat_title">Gyroscoop</string>
     <string name="use_gyro_calibration_title_head">Kalibratiegegevens gebruiken</string>
-    <string name="use_gyro_calibration_summary_head">Gebruik de kalibratiewaarden van de gyroscoop. Gelieve hierna een kalibratie te doen.</string>
+    <string name="use_gyro_calibration_summary_head">Kalibratiewaarden van de gyroscoop gebruiken. Voer hierna a.u.b. een kalibratie uit.</string>
     <string name="calibrate_gyro_title_head">Kalibreren</string>
     <string name="calibrate_gyro_summary_head">Plaats de telefoon op een vlakke ondergrond en tik hier om te kalibreren</string>
     <string name="touchkey_subcat_title">Aanraakknop</string>
     <string name="touchkey_light_title_head">Achtergrondlicht bij knoppen inschakelen</string>
     <string name="touchkey_light_summary_head">Aanraakknoppen oplichten indien scherm aan is</string>
+    <string name="touchkey_timeout_title_head">Time-out achtergrondlicht</string>
+    <string name="touchkey_timeout_summary_head">Vertraging na druk op een knop voor uitschakelen achtergrondlicht</string>
 
-    <string name="category_haptic_title">Haptisch</string>
+    <string name="category_haptic_title">Trillen</string>
     <string name="vibrator_subcat_title">Trillen</string>
     <string name="vibrator_intensity_title_head">Trilintensiteit</string>
     <string name="vibrator_intensity_summary_head">Trilintensiteit instellen</string>
