@@ -7,7 +7,7 @@
         <item>Uiterlijk</item>
         <item>Navigatie</item>
         <item>Galerij</item>
-        <item>VT</item>
+        <item>Terminal</item>
     </string-array>
     <string-array name="mdnie_mode_entries">
         <item>Standaard</item>
@@ -46,5 +46,14 @@
         <item>Alleen UMTS</item>
         <item>Alleen HSDPA</item>
         <item>HSDPA &amp; HSUPA</item>
+    </string-array>
+    <string-array name="touchkey_timeout_entries">
+        <item>Nooit</item>
+        <item>1 seconde</item>
+        <item>2 seconden</item>
+        <item>3 seconden (standaard)</item>
+        <item>4 seconden</item>
+        <item>5 seconden</item>
+        <item>6 seconden</item>
     </string-array>
 </resources>
