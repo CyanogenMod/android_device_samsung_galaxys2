@@ -1,0 +1,11 @@
+Change-Id: I890729a5f442fac1747fa0573ed89cedc4db8364
+Code-Review+2: Marco Brohet <therbom@gmail.com>
+Verified+1: Marco Brohet <therbom@gmail.com>
+Code-Review+1: AxiS Terentyev <terentyev.axis@gmail.com>
+Code-Review+1: Alexey Alexeevich <madzerling@gmail.com>
+Code-Review+1: Anatoly Nechaev <mr.prayer@gmail.com>
+Submitted-by: Marco Brohet <therbom@gmail.com>
+Submitted-at: Sat, 05 Jan 2013 09:12:43 -0800
+Reviewed-on: http://review.cyanogenmod.org/18441
+Project: CyanogenMod/android_device_samsung_galaxys2
+Branch: refs/heads/ics
