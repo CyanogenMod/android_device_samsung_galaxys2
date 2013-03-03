@@ -16,6 +16,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+TARGET_KERNEL_CUSTOM_TOOLCHAIN:= arm-eabi-4.4.3
+
 INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/boot.img
 
 uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk.cpio
